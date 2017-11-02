@@ -1,0 +1,30 @@
+body{
+    margin: 10%;
+    margin-top: 3pt;
+    width:90%;
+}
+
+#submit{
+    width : 20%;
+}
+#reset{
+    width: 20%;
+}
+
+
+form {
+    float: left;
+    text-align: right;
+    width: 65%;
+}
+
+form select {
+    margin: 10px;
+    width: 56%;
+}
+
+input{
+    margin: 10px;
+    padding: 5px;
+    width: 55%
+}

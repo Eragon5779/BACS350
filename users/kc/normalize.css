@@ -1,0 +1,184 @@
+header
+{
+	text-align:center;
+}
+
+#gradBanner
+{
+	float:top;
+	margin-bottom: 1%;
+	box-shadow:outset 1px 1px 40px 0 rgba(0,0,0,.45);
+}
+#bearFace
+{
+	width:1500px;
+	height:auto;
+	opacity:.25;
+	margin-left:50px;
+	margin-top:-10px;
+	z-index:-2;
+	position:absolute;
+}
+img.banner
+{
+	
+}
+h1 
+{
+	font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+	font-size: 35px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	color:white;
+	line-height: 26.4px;
+}
+footer
+{
+	text-align: center;
+	color: black;
+	opacity:0.5;
+	z-index:0;
+	margin-top:200px;
+}
+li.leftA
+{
+	margin-left: auto;
+	margin-right: auto;
+	font-size: auto;
+	padding: 10px;
+	width: 150px;
+	margin-bottom: 1%;
+	background-color: #007acc;
+	text-align: center;
+	box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
+	transition: all 0.3s ease 0s;
+}
+li.listWords
+{
+	font-size: auto;
+	color: white;
+	text-decoration: none;
+	padding: 10px;
+	width: 150px;
+	margin-bottom: 1%;
+	margin-left:20px;
+	background-color: #3f639e;
+	text-align: center;
+	box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
+	transition: all 0.3s ease 0s;
+	list-style:none;
+}
+li.listWords:hover
+{
+	background-color:#c1d4f2;
+	box-shadow: inset 0 0 0 5px rgba(0,0,0,.25);
+	color:#5e7fb5;
+}
+li.leftA:hover
+{
+	background-color: #007acc;
+	box-shadow: inset 0 0 0 5px rgba(0,0,0,.25);
+}
+a.spacePad
+{
+	text-decoration:none;
+	list-style: none;
+	color: white;
+	font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+}
+a.spacePad:hover
+{
+	color: #e8e8e8
+}
+a.listItem
+{
+	list-style:none;
+	text-decoration:none;
+	padding: 10px;
+}
+body    
+{  
+	background:#e7e7e7;
+}
+#pictureBox    
+{  
+	width:400px;
+    height:300px;
+    box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
+    border-bottom:2px solid #fff;
+	border-right:2px solid #fff;
+	margin:5% auto 0 auto; 
+	background-size:cover;
+	border-radius:5px;
+	overflow:hidden;
+	z-index:2;
+}
+#overlay
+{  
+    text-align:auto;
+    margin-top:-170px;
+    opacity:0;
+    -webkit-transition: opacity .25s ease;
+	z-index:2;
+}
+
+#pictureBox:hover #overlay 
+{
+    opacity:1;
+	z-index:2;
+}
+
+#buttons
+{
+	margin-left:auto;
+	margin-right:auto
+}
+
+#mainBan
+{
+	width:30px;
+	padding:10px;
+}
+#underlay
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:200px;
+	background: #007acc;
+	text-align:center;
+	padding:10px;
+	box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
+	transition: all 0.3s ease 0s;
+}
+#hvrDiv
+{
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	z-index:-1;
+	margin-top: -180px;
+	color: white;
+	font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+}
+#contentWrapper
+{
+	margin-left:auto;
+	margin-right:auto;
+	padding-top:10px;
+	background:black;
+}
+#contentBox
+{
+	font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+	text-align:left;
+	width:1300px;
+	height:500px;
+	margin-left:auto;
+	margin-right:auto;
+	box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
+	
+}
+body
+{
+}

@@ -1,0 +1,65 @@
+/* the styles for the elements */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+	width: 600px;
+	margin-top: auto;
+	margin-bottom: auto;
+	border:3px solid #931420;
+	margin-left:auto;
+	margin-right:auto;
+}
+#specificBorder{
+	padding:5px;
+	border-style: double;
+	border-color: #931420;
+	border-radius:10px;
+	box-shadow: 5px 5px grey;
+	background-color: white;
+	text-align:center;
+}
+#contentWrap{
+	background: #fffded;
+}
+#numTag
+{
+	color: black;
+	text-shadow: 2px 2px #FF0000;
+}
+.defaultFont
+{
+	color: #931420;
+}
+/* the styles for the header */
+header img{
+	float: left;
+	padding-top: 20px;
+}
+header{
+	border-bottom:3px solid #931420;
+	padding:10px;
+	background: linear-gradient(45deg,#f6bb73 0%, #f6bb73 5%,white 40%, white 50%, white 60%, #f6bb73 95%, #f6bb73 100%)
+}
+#movableH{
+	margin-top:-13px;
+}
+#headerTxt{
+	padding-left:20%;
+	padding-top:5px;
+}
+.speakerClass{
+	
+}
+/* the styles for the section */
+main {
+	clear: left;
+	margin:20px;
+}
+
+/* the styles for the footer */
+footer{
+	background: #931420;
+	color: white;
+	padding:5px;
+	text-align: center;
+}

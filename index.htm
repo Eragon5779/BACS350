@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+
+
+    <head>
+        <title>Under Construction</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+
+
+    <body>
+
+        <h1>Welcome to Team 3's Website!</h1>
+	<br /> <br />
+	
+	<h2>Final Site</h2?>
+	<ul>
+		<li><a href="Final/Testing/index.html" >Final</a></li>
+	</ul>
+	
+	<h2>Assignments</h2>
+	<ul>
+		<li><a href="assignments/ass1/form.html">Project 1</a></li>
+	</ul>	
+
+	<!--the accordians for all of the users-->
+	<h2>User Homepages</h2>
+	
+	<button class="accordion">Matthew Hinze</button>
+	<div class ="panel">
+		<p>Welcome to <a href="users/matt/index.html">Matt's Homepage</a></p>
+	</div>
+
+	<button class="accordion">Casey Burklow</button>
+	<div class ="panel">
+		<p>Welcome to <a href="users/casey/index.html">Casey's Homepage</a></p>
+	</div>
+
+	<button class="accordion">KC Guzman</button>
+	<div class ="panel">
+		<p>Welcome to <a href="users/kc/index.html">KC's Homepage</a></p>
+	</div>
+	
+	<button class="accordion">Isaac Dudney</button>
+	<div class ="panel">
+		<p>Welcome to <a href="users/isaac/index.html">Isaac's Homepage</a></p>
+	</div>
+	
+	
+	<!--the accordians for all of the users
+	
+	</br>
+	<a href="https://time.is/Greeley" id="time_is_link" rel="nofollow" style="font-size:36px">Time in Greeley:</a>
+	<span id="Greeley_z12b" style="font-size:36px"></span>
+	<script src="//widget.time.is/en.js"></script>
+	<script>
+	time_is_widget.init({Greeley_z12b:{template:"TIME<br>DATE", time_format:"12hours:minutes:secondsAMPM", date_format:"dayname, monthname dnum, year"}});
+	</script>-->
+
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].onclick = function(){
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.display === "block") {
+					panel.style.display = "none";
+				} else {
+					panel.style.display = "block";
+				}
+			}
+		}</script>
+
+    </body>
+</html>

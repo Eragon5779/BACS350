@@ -1,0 +1,156 @@
+/* Media queries for a mobile-up design (see p. 301) */
+
+/* Default (Mobile Portrait Layout) */
+html {
+	background-image: linear-gradient(to bottom, white 0%, gray 100%);	
+}
+body  {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	background-color: white;
+}
+
+/* Header */
+header img.mobile { 
+	display: block;
+	margin: 0px auto;
+} 
+header img.mobile-landscape {
+	display: none;
+}
+header img.tablet-desktop {
+	display: none;
+}
+/* Menu */
+
+#mobile_menu {
+	display: block;
+}
+
+#nav_menu {
+	display: none;
+}
+
+#nav_menu ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+#nav_menu ul li {
+	float: left;
+	width: 25%;
+
+}
+
+#nav_menu ul li a {
+	text-align: center;
+	display: block;
+	padding: 1em 0;
+	text-decoration: none;
+	background-color: blue;
+	color: white;
+	font-weight: bold;
+	border-right: 2px solid white;
+}
+
+#nav_menu > ul::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* Section */
+aside {
+	border: solid thin green;
+	width: 35%;
+	float: right;
+	padding: 0 1%;
+}
+
+section {
+	width: 60%;
+	padding: 1%;
+}
+
+section img {
+	max-width: 500px;
+	width: 100%;
+}
+/* Footer */
+footer { 
+	clear: both;
+	border-top: 1px solid black;
+    background-color: gray;
+} 
+footer p {
+	font-size: .6em;
+	text-align: center;
+}
+
+/* mobile landscape layout (480px to 767px) */
+@media only screen and (min-width: 480px){
+	header img.mobile{
+		display: none;
+	}
+	header img.mobile-landscape {
+		display: block;
+		margin: 0px auto;
+	}
+	header img.tablet-desktop {
+		display: none;
+	}
+
+	#mobile_menu {
+		display: block;
+	}
+
+	#nav_menu {
+		display: none;
+	}
+
+}
+
+/* tablet portrait layout (768px to 959px) */
+@media only screen and (min-width: 768px){
+		header img.mobile{
+		display: none;
+	}
+	header img.mobile-landscape {
+		display: none;
+	}
+	header img.tablet-desktop {
+	display: block;
+	margin: 0px auto;
+	}
+	
+	body {
+		width: 90%;
+		margin: 0px auto;
+	}
+
+	#mobile_menu {
+		display: none;
+	}
+
+	#nav_menu {
+		display: block;
+	}
+	
+}
+/* tablet landscape and desktop layout (960px or  more) */
+@media only screen and (min-width: 960px){
+	body {
+		width: 80%;
+		margin: 0px auto;
+	}
+
+	#mobile_menu {
+		display: none;
+	}
+
+	#nav_menu {
+		display: block;
+	}
+	
+	
+}

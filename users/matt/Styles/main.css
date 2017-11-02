@@ -1,0 +1,41 @@
+html{
+	background: -moz-linear-gradient(#F8B195, #C06C84);
+}
+
+header{
+	padding: 5px 0px 5px 10px;
+	border: 5px solid white;
+	margin-bottom: 2%;
+	background-color: #355C7D;
+	color: white;
+}
+
+section{
+	border: 5px solid white;
+	padding: 5px 0px 5px 10px;
+	height: 800px;
+	padding-left,padding-right: 30px;
+	padding-top, padding-bottom: 10px;
+	background-color: #355C7D;
+}
+
+body{  
+	margin: 10%;
+	padding: 
+	width: 80%;
+	height: 100%;
+	color: white;
+	
+}
+
+body img{
+	border: 3px solid white;
+	border-radius: 30px;
+	margin: 5%;
+	float: right;
+	
+}
+
+.title{
+	font-size: xx-large;
+}
