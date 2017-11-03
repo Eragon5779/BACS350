@@ -123,6 +123,9 @@
 	left:-4em;
 	border-radius:100%;
 }
+.error {
+	color: red;
+}
 
 @keyframes xfade {
 	0% {

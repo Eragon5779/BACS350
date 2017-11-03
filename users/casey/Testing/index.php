@@ -99,7 +99,7 @@ if(isset($_POST['submit'])){
 			//$mail->send();
 
 			//redirect to index page
-			header('Location: index.php?action=joined');
+			header('Location: /Final/Testing/index.php');
 			exit;
 
 		//else catch the exception and show the error.
@@ -126,7 +126,7 @@ require('layout/header.php');
 	    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 			<form role="form" method="post" action="" autocomplete="off">
 				<h2>Please Sign Up</h2>
-				<p>Already a member? <a href='login.php'>Login</a></p>
+				<!--<p>Already a member? <a href='login.php'>Login</a></p>-->
 				<hr>
 
 				<?php

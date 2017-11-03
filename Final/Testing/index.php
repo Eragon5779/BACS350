@@ -43,6 +43,13 @@ require('layout/header.php');
 
 <header>
 		<div id="head">
+			<?php
+			if(isset($error)){
+					foreach($error as $error){
+						echo '<p class="error">'.$error.'</p>';
+					}
+				}
+			?>
 			<!--
 			<form id="create">
 				<input type="email" name="email" placeholder="email"><br>
@@ -63,7 +70,8 @@ require('layout/header.php');
 				echo '<p>Hello, Anon</p>
 				<input type="text" name="username" id="name" placeholder="username"><br>
 				<input type="password" name="password" id="password" placeholder="password"><br>
-				<input type="submit" name="submit" value="Login"><br>';
+				<input type="submit" name="submit" value="Login"><br>
+				<a href="/users/casey/Testing/index.php"><button type="button">Register</button></a>';
 			
 			}	
 			?>
