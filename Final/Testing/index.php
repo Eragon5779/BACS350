@@ -20,7 +20,7 @@ if(isset($_POST['submit'])){
 
 		if($user->login($username,$password)){
 			$_SESSION['username'] = $username;
-			header('Location: dash/dash.html');
+			header('Location: dash.php');
 			exit;
 
 		} else {

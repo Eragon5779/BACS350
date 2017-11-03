@@ -1,3 +1,8 @@
+<?php
+  require_once('includes/config.php');
+  if(!$user->is_logged_in()){ header('Location: index.php'); exit(); }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +12,7 @@
 <title>User Profile Page</title>
 
 <!-- Bootstrap -->
-<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="dash/css/bootstrap.css">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,7 +27,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="../index.php">Artist'sAlley</a></div>
+      <a class="navbar-brand" href="index.php">Artist'sAlley</a></div>
     
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -60,7 +65,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <h1 class="text-center">Ducky's Profile</h1>
+          <?php $firstName = $_SESSION['firstName']; echo "<h1 class=\"text-center\">$firstName's Profile</h1>"; ?>
           <p class="text-center">Welcome to your profile page! Here you can edit your user preferences, and see all current bidding activity you are a part of.</p>
           <p>&nbsp;</p>
           <p class="text-center"><a class="btn btn-primary btn-lg" href="index.html" role="button">Back to Home</a> </p>

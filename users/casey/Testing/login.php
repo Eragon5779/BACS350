@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
 }//end if submit
 
 //define page title
-$title = 'Login';
+$title = 'Demo';
 
 //include header template
 require('layout/header.php'); 
