@@ -13,7 +13,7 @@ class User extends Password{
 	private function get_user_hash($username){
 
 		try {
-			$stmt = $this->_db->prepare('SELECT passHash, username FROM users WHERE username = :username');
+			$stmt = $this->_db->prepare('SELECT passHash, username, firstName FROM users WHERE username = :username');
 			$stmt->execute(array('username' => $username));
 
 			return $stmt->fetch();
@@ -39,7 +39,8 @@ class User extends Password{
 		if($this->password_verify($password,$row['passHash']) == 1){
 
 		    $_SESSION['loggedin'] = true;
-		    $_SESSION['username'] = $row['username'];
+			$_SESSION['username'] = $row['username'];
+			$_SESSION['firstName'] = $row['firstName'];
 		    return true;
 		}
 	}

@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
 			exit;
 
 		} else {
-			$error[] = 'Wrong username or password or your account has not been activated.';
+			$error[] = 'Wrong username or password.';
 		}
 	}else{
 		$error[] = 'Usernames are required to be Alphanumeric, and between 3-16 characters long';
@@ -51,11 +51,22 @@ require('layout/header.php');
 				<input type="submit" value="Create">
 			</form>
 			-->
+
 			<form role="form" id="login" action="" method="post">
-			
+			<?php if ($user->is_logged_in()){
+				$firstName = $_SESSION['firstName'];
+				echo '<p>Hello, ' . $firstName . '</p><br>
+				<a href="logout.php"><button type="button">Logout</button></a>';
+				
+			}
+			else {
+				echo '<p>Hello, Anon</p>
 				<input type="text" name="username" id="name" placeholder="username"><br>
 				<input type="password" name="password" id="password" placeholder="password"><br>
-				<input type="submit" name="submit" value="Login"><br>
+				<input type="submit" name="submit" value="Login"><br>';
+			
+			}	
+			?>
 			</form>
 		</div>
 		<div style="background-image:url('media/hero.png');" id="hero">

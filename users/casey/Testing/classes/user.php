@@ -39,7 +39,8 @@ class User extends Password{
 		if($this->password_verify($password,$row['passHash']) == 1){
 
 		    $_SESSION['loggedin'] = true;
-		    $_SESSION['username'] = $row['username'];
+			$_SESSION['username'] = $row['username'];
+			$_SESSION['firstName'] = $row['firstName'];
 		    return true;
 		}
 	}
