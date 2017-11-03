@@ -1,16 +1,47 @@
-<!DOCTYPE html>
-<html>
+<?php
+//include config
+require_once('includes/config.php');
 
-<head>
-	<meta charset="UTF-8">
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-	<link rel="stylesheet" href="index.css">
-	<title>YCH</title>
-</head>
+//check if already logged in move to home page
+//if( $user->is_logged_in() ){ header('Location: index.php'); exit(); }
 
-<body>
+//process login form if submitted
+if(isset($_POST['submit'])){
 
-	<header>
+	if (!isset($_POST['username'])) $error[] = "Please fill out all fields";
+	if (!isset($_POST['password'])) $error[] = "Please fill out all fields";
+
+	$username = $_POST['username'];
+	if ( $user->isValidUsername($username)){
+		if (!isset($_POST['password'])){
+			$error[] = 'A password must be entered';
+		}
+		$password = $_POST['password'];
+
+		if($user->login($username,$password)){
+			$_SESSION['username'] = $username;
+			header('Location: dash/dash.html');
+			exit;
+
+		} else {
+			$error[] = 'Wrong username or password or your account has not been activated.';
+		}
+	}else{
+		$error[] = 'Usernames are required to be Alphanumeric, and between 3-16 characters long';
+	}
+
+
+
+}//end if submit
+
+//define page title
+$title = 'YCH';
+
+//include header template
+require('layout/header.php'); 
+?>
+
+<header>
 		<div id="head">
 			<!--
 			<form id="create">
@@ -20,10 +51,11 @@
 				<input type="submit" value="Create">
 			</form>
 			-->
-			<form id="login" action="dash/dash.html">
-				<input type="email" name="email" placeholder="email"><br>
-				<input type="password" name="password" placeholder="password"><br>
-				<input type="submit" value="Login"><br>
+			<form role="form" id="login" action="" method="post">
+			
+				<input type="text" name="username" id="name" placeholder="username"><br>
+				<input type="password" name="password" id="password" placeholder="password"><br>
+				<input type="submit" name="submit" value="Login"><br>
 			</form>
 		</div>
 		<div style="background-image:url('media/hero.png');" id="hero">
@@ -71,5 +103,6 @@
 	</div>
 
 </body>
+
 
 </html>
