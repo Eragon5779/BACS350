@@ -68,7 +68,7 @@
           <?php $firstName = $_SESSION['firstName']; echo "<h1 class=\"text-center\">$firstName's Profile</h1>"; ?>
           <p class="text-center">Welcome to your profile page! Here you can edit your user preferences, and see all current bidding activity you are a part of.</p>
           <p>&nbsp;</p>
-          <p class="text-center"><a class="btn btn-primary btn-lg" href="index.html" role="button">Back to Home</a> </p>
+          <p class="text-center"><a class="btn btn-primary btn-lg" href="index.php" role="button">Back to Home</a> </p>
         </div>
       </div>
     </div>
@@ -97,7 +97,7 @@
         <h3>Notification Settings</h3>
         <p>Notification Settings for the site, and any bids you are currently active in.</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="https://cdn.discordapp.com/attachments/372487338439344128/375725265550180353/image.jpg" data-holder-rendered="true">
+      <?php $firstName = $_SESSION['firstName']; echo '<div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="/media/' . $firstName . '.jpg" data-holder-rendered="true">';?>
         <h3>Profile Settings</h3>
         <p>Profile Settings to modify your public presence on the site.</p>
       </div>
