@@ -120,6 +120,9 @@
 	display:block;
 	border:8px solid #eee;
 	margin-top:-6em;
+	/* Chrome Fixes */
+	margin-left: auto;
+	margin-right: auto;
 	left:-4em;
 	border-radius:100%;
 }
