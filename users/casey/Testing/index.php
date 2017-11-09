@@ -146,7 +146,7 @@ require('layout/header.php');
 					<input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" value="<?php if(isset($error)){ echo htmlspecialchars($_POST['first_name'], ENT_QUOTES); } ?>" tabindex="1">
 				</div>
 				<div class="form-group">
-					<input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="User Name" value="<?php if(isset($error)){ echo htmlspecialchars($_POST['last_name'], ENT_QUOTES); } ?>" tabindex="2">
+					<input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" value="<?php if(isset($error)){ echo htmlspecialchars($_POST['last_name'], ENT_QUOTES); } ?>" tabindex="2">
 				</div>
 				<div class="form-group">
 					<input type="text" name="username" id="username" class="form-control input-lg" placeholder="User Name" value="<?php if(isset($error)){ echo htmlspecialchars($_POST['username'], ENT_QUOTES); } ?>" tabindex="3">
