@@ -23,15 +23,17 @@ DROP TABLE IF EXISTS `items`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `items` (
-  `id` char(255) DEFAULT NULL,
-  `description` text,
-  `image` text,
-  `title` char(64) DEFAULT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `op` varchar(255) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `title` varchar(255) NOT NULL,
+  `listTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `endTime` datetime DEFAULT NULL,
   `currentBid` float DEFAULT NULL,
-  `listTime` time DEFAULT NULL,
-  `endTime` time DEFAULT NULL,
-  `reserve` float DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `currentBidder` varchar(255) DEFAULT NULL,
+  `reserve` float DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +42,7 @@ CREATE TABLE `items` (
 
 LOCK TABLES `items` WRITE;
 /*!40000 ALTER TABLE `items` DISABLE KEYS */;
+INSERT INTO `items` VALUES (1,'eragon5779','Test Item','Test Item','2017-11-07 14:40:37',NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -69,7 +72,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('eragon5779','eragon5779@gmail.com','Casey','Burklow','f306e70f825aa7dcf0d29bfd28f05b60','$2y$12$f306e70f825aa7dcf0d29OcDsyxInu5kA.vRErXK8hLietdTZt3k2',NULL,NULL);
+INSERT INTO `users` VALUES ('Duk','guzm3915@bears.unco.edu','KC','Guzman','69a1c72d5a8f98c922d1f0ab26e4c215','$2y$12$69a1c72d5a8f98c922d1fu7ML30CNYWzb3Xsu6WXxGMHdZ9Dl6klS',NULL,NULL),('eragon5779','eragon5779@gmail.com','Casey','Burklow','f306e70f825aa7dcf0d29bfd28f05b60','$2y$12$f306e70f825aa7dcf0d29OcDsyxInu5kA.vRErXK8hLietdTZt3k2',NULL,NULL),('jbarker','asdf@afds.asdf','Jon','Barker','a9abf96075eeb460f48fe0cc08a376a6','$2y$12$a9abf96075eeb460f48feui3BnbWVjqt4RNiAdA1LCMng0XRcfhza',NULL,NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -82,4 +85,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-03  9:46:47
+-- Dump completed on 2017-11-09 14:18:23
