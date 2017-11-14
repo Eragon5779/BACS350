@@ -41,63 +41,6 @@ $title = 'YCH';
 require('layout/header.php'); 
 ?>
 
-<header>
-		<div id="head">
-			<?php
-			if(isset($error)){
-					foreach($error as $error){
-						echo '<p class="error">'.$error.'</p>';
-					}
-				}
-			?>
-			<!--
-			<form id="create">
-				<input type="email" name="email" placeholder="email"><br>
-				<input type="password" name="password" placeholder="password"><br>
-				<input type="password" name="confirm" placeholder="confirm"><br>
-				<input type="submit" value="Create">
-			</form>
-			-->
-
-			<form role="form" id="login" action="" method="post">
-			<?php if ($user->is_logged_in()){
-				$firstName = $_SESSION['firstName'];
-				echo '<p>Hello, ' . $firstName . '</p><br>
-				<a href="logout.php"><button type="button">Logout</button></a>';
-				
-			}
-			else {
-				echo '<p>Hello, Anon</p>
-				<input type="text" name="username" id="name" placeholder="username"><br>
-				<input type="password" name="password" id="password" placeholder="password"><br>
-				<input type="submit" name="submit" value="Login"><br>
-				<a href="/users/casey/Testing/index.php"><button type="button">Register</button></a>';
-			
-			}	
-			?>
-			</form>
-		</div>
-		<div style="background-image:url('media/hero.png');" id="hero">
-		<nav id="nav_menu">
-			<ul>
-				<li><a href=".html">Categories</a>
-					<ul>
-						<li><a href="" >Test 1</a></li>
-						<li><a href="" >Test 2</a></li>
-						<li><a href="" >Test 3</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-		<nav id="search_bar">
-			<form>
-			<input type="search" name="search" placeholder="search">
-			</form>
-		</nav>
-		</div>
-		<img src="media/logo.png" alt="logo" id="logo">
-	</header>
-
 	<div id="slideshow">
 		<img class="slide" src="media/hayfields.png">
 		<div class="info">
