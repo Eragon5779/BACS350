@@ -39,7 +39,7 @@
 			
 		<div>
 			<nav id="l">CATEGORIES</nav>
-			<nav id="r"><input placeholder="SEARCH"></input></nav>
+			<nav id="r"><input type="text" placeholder="SEARCH"></input></nav>
 			<img src="media/logo.png"></img>
 		</div>
 	</header>

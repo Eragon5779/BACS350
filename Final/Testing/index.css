@@ -85,6 +85,7 @@
 	text-indent:0;
 }
 
+/* Product CSS */
 .product{
 	background-color: #333333;
 	background-position: center;
@@ -94,7 +95,7 @@
 	margin-bottom: 1em;
 }
 
-/* Product CSS */
+
 .product p, .product h2{
 	color: #eeeeee;
 }

@@ -19,7 +19,7 @@
 			echo '<div class="product" style="background-image: url(' . $images[0] . ');"> 
 
 			<div>
-			<h2>' . $item['title'] . '</h2>
+			<h2><a href="product.php?id=' . $item['id'] . '">' . $item['title'] . '</a></h2>
 			
 			<h3>Current bid: $' . number_format($item['currentBid'], 2) . '</h3>
 			
