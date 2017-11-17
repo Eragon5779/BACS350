@@ -6,14 +6,14 @@ session_start();
 date_default_timezone_set('America/Denver');
 
 //database credentials
-define('DBHOST','localhost');
+define('DBHOST','192.185.17.37');
 define('DBUSER','eragon57_readdb');
 define('DBPASS','XVb8@H8%E#1@uvN2!G&dnwqNjyw@^0#u*');
 define('DBNAME','eragon57_bacs350');
 
 //application address
-define('DIR','http://localhost/');
-define('SITEEMAIL','burk0683@bears.unco.edu');
+define('DIR','http://192.185.17.37/');
+define('SITEEMAIL','webmaster@dragonfirecomputing.com');
 
 try {
 

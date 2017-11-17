@@ -30,7 +30,7 @@
 				<input type="password" name="password" id="password" placeholder="password"><br>
 				<div id="KILLME">
 				<input type="submit" name="submit" value="Login">
-				<button type="button"><a href="/users/casey/Testing/index.php">Register</a></button>
+				<button type="button"><a href="/users/casey/Testing/register.php">Register</a></button>
 				</div>';
 			
 			}	
