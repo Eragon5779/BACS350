@@ -7,9 +7,9 @@ date_default_timezone_set('America/Denver');
 
 //database credentials
 define('DBHOST','localhost');
-define('DBUSER','readdb');
-define('DBPASS','');
-define('DBNAME','user');
+define('DBUSER','eragon57_readdb');
+define('DBPASS','XVb8@H8%E#1@uvN2!G&dnwqNjyw@^0#u*');
+define('DBNAME','eragon57_bacs350');
 
 //application address
 define('DIR','http://localhost/');
