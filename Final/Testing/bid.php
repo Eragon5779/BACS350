@@ -1,9 +1,9 @@
-<?php require("config.php");
+<?php require("includes/config.php");
     try {
         $bid = $_POST['bid'];
         $product = $_POST['id'];
         $bidder = $_SESSION['username'];
-        $hist = $_POST['history'] + ',' + $bidder;
+        $hist = ($_POST['history'] != '' ? $_POST['history'].  ',' . $bidder : $_POST['history']);
 
         $stmt = $db->prepare('UPDATE items SET currentBid = :bid, bidHistory = :hist WHERE id = :id');
         $stmt->bindValue(':bid',$bid);
@@ -14,7 +14,7 @@
         header("Location: product.php?id=" . $product);
     }
     catch (Exception $e) {
-        echo $e;
+        echo $e->getMessage();
     }
     
 

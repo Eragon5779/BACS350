@@ -21,13 +21,21 @@
 		<h3><?php echo $item['op'] ?></h3>
 		
 		<p><?php echo $item['description'] ?></p>
-
-		<form action="includes/bid.php" method="post">
-			<?php echo 'Your Bid: $<input type="text" name="bid" placeholder="' . ($item['currentBid'] + .01) . '">' ?>
-			<input type="hidden" name="history" value=<?php echo '"' . $item['bidHistory'] . '"' ?>>
-			<input type="hidden" name="id" value=<?php echo '"' . $currentID . '"' ?>>
-			<input type="submit">
-		</form>
+		<?php
+			if ($user->is_logged_in()) {
+				echo '
+				<form action="bid.php" method="post">
+				Your Bid: $<input type="text" name="bid" id="bid" value="' . ($item['currentBid'] + .01) . '">
+				<input type="hidden" name="history" id="history" value="' . ($item['bidHistory'] != '' ? $item['bidHistory'] : '') . '">
+				<input type="hidden" name="id" id="id" value=<"' . $currentID . '">
+				<input type="submit" name="submit" id="submit" value="Bid">
+			</form>';
+			}
+			else {
+				echo 'Please sign in/register to bid';
+			}
+			
+		?>
 		
 		</div>
 		
