@@ -11,10 +11,14 @@ header form {
 	width:25%;
 }
 header form * {
+  color:#333 !important;
 	height:1.5em;
 	padding:0 5%;
 	margin:0.25em;	
 	width:90%;
+}
+header form p {
+	color:#eee !important;
 }
 #KILLME {
 	width:100%;
@@ -22,9 +26,10 @@ header form * {
 	padding:0;
 	top:5.3333em;
 	background:none;
-	float: right;
+	float:right;
 }
 #KILLME * {
+	background-color:#ddd;
 	width:47.5%;
 	padding:0;
 	margin:0;
@@ -35,7 +40,7 @@ header form * {
 	right:0 !important;
 	float:right;
 	/*margin-left:0.25em;*/
-	margin: auto;
+	margin:auto;
 }
 
 header div {
