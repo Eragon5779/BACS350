@@ -23,7 +23,7 @@
 			
 			<h3>Current bid: $' . number_format($item['currentBid'], 2) . '</h3>
 			
-			<h3>' . $item['op'] . '</h3>
+			<h3><a href="search.php?keyword="' . $item['op'] . '>' . $item['op'] . '</a></h3>
 			
 			<p>' . $item['description'] . '</p>
 			
