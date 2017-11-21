@@ -28,7 +28,7 @@ CREATE TABLE `items` (
   `description` varchar(255) NOT NULL,
   `currentBid` float DEFAULT NULL,
   `bidHistory` text,
-  `listTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `listTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `endTime` datetime DEFAULT NULL,
   `reserve` float DEFAULT NULL,
   `op` varchar(255) NOT NULL,

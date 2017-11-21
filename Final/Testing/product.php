@@ -1,10 +1,10 @@
 <?php require('includes/config.php');
 
 	$currentID = $_GET["id"];
-	$stmt = $db->prepare('SELECT title, description, currentBid, op FROM items where id = :id');
+	$stmt = $db->prepare('SELECT title, description, currentBid, op, bidHistory FROM items where id = :id');
 	$stmt->execute(array(':id' => $currentID));
 	$row = $stmt->fetch(PDO::FETCH_ASSOC);
-	$item = array('title'=>$row['title'], 'description'=>$row['description'], 'currentBid'=>$row['currentBid'], 'op'=>$row['op']);
+	$item = array('title'=>$row['title'], 'description'=>$row['description'], 'currentBid'=>$row['currentBid'], 'op'=>$row['op'], 'bidHistory'=>$row['bidHistory']);
 
 	$images = glob("media/items/" . $currentID . "/*.*");
 	$title = $row['title'];
@@ -21,6 +21,21 @@
 		<h3><?php echo $item['op'] ?></h3>
 		
 		<p><?php echo $item['description'] ?></p>
+		<?php
+			if ($user->is_logged_in()) {
+				echo '
+				<form action="bid.php" method="post">
+				Your Bid: $<input type="text" name="bid" id="bid" value="' . ($item['currentBid'] + .01) . '">
+				<input type="hidden" name="history" id="history" value="' . $item['bidHistory'] . '">
+				<input type="hidden" name="id" id="id" value="' . $currentID . '">
+				<input type="submit" name="submit" id="submit" value="Bid">
+			</form>';
+			}
+			else {
+				echo 'Please sign in/register to bid';
+			}
+			
+		?>
 		
 		</div>
 		
