@@ -26,8 +26,8 @@
 				echo '
 				<form action="bid.php" method="post">
 				Your Bid: $<input type="text" name="bid" id="bid" value="' . ($item['currentBid'] + .01) . '">
-				<input type="hidden" name="history" id="history" value="' . ($item['bidHistory'] != '' ? $item['bidHistory'] : '') . '">
-				<input type="hidden" name="id" id="id" value=<"' . $currentID . '">
+				<input type="hidden" name="history" id="history" value="' . $item['bidHistory'] . '">
+				<input type="hidden" name="id" id="id" value="' . $currentID . '">
 				<input type="submit" name="submit" id="submit" value="Bid">
 			</form>';
 			}
