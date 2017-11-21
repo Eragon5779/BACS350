@@ -30,6 +30,7 @@ header form p {
 }
 #KILLME * {
 	background-color:#ddd;
+	text-decoration:none;
 	width:47.5%;
 	padding:0;
 	margin:0;
@@ -39,7 +40,6 @@ header form p {
 	position:absolute;
 	right:0 !important;
 	float:right;
-	/*margin-left:0.25em;*/
 	margin:auto;
 }
 
