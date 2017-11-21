@@ -95,6 +95,9 @@
 	margin-bottom: 1em;
 }
 
+.product form {
+	background-color: #333333 !important;
+}
 
 .product p, .product h2{
 	color: #eeeeee;
