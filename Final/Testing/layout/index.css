@@ -75,6 +75,9 @@ header div #r input {
 	padding:0.25em;
 	border:0;
 }
+header div #r #b {
+	margin-top: 2em;
+}
 header div img {
 	position:absolute;
 	left:50%;
