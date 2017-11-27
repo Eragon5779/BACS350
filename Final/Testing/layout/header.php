@@ -39,7 +39,10 @@
 			
 		<div>
 			<nav id="l">CATEGORIES</nav>
-			<form id="r"><input type="text" placeholder="SEARCH"></input><input type="button" action="search.php" method="get"></input></form>
+			<form id="r">
+			<input type="text" placeholder="search"></input>
+			<input id="b" type="button" action="search.php" method="get">Button</input>
+			</form>
 			<img src="media/logo.png"></img>
 		</div>
 	</header>
