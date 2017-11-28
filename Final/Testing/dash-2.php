@@ -22,7 +22,7 @@ require("layout/header.php");
 
 ?>
 
-<body>
+<body style="background-colod: #333;">
 
     <h1><?php echo $userInfo['firstName'] ?>'s Profile</h1>
     <br />
