@@ -12,7 +12,7 @@ else {
 $stmt = $db->prepare('SELECT username, email, firstName FROM users where username = :username');
 $stmt->execute(array(':username' => $currentUser));
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
-$user = array('username'=>$row['username'], 'email'=>$row['email'], 'firstName'=>$row['firstName']);
+$userInfo = array('username'=>$row['username'], 'email'=>$row['email'], 'firstName'=>$row['firstName']);
 
 $stmt = $db->prepare('SELECT id, title FROM items where op = :op');
 $stmt->execute(array(':op' => $currentUser));
