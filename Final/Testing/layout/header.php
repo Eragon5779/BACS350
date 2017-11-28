@@ -39,7 +39,7 @@
 			
 		<div>
 			<nav id="l">CATEGORIES</nav>
-			<form id="r" action="search" method="get">
+			<form id="r" action="search.php" method="get">
 			<input type="text" name="keyword" placeholder="search"></input>
 			<input style="margin-top:2.5em;" class="butt" type="submit" value="Submit"></input>
 			</form>
