@@ -18,7 +18,7 @@
 		
 		<h3>Current bid: $<?php echo number_format($item['currentBid'], 2) ?></h3>
 		
-		<h3><?php echo $item['op'] ?></h3>
+		<h3><?php echo '<a href="dash-2.php?username=' . $item['op']  . '">' . $item['op'] . '</a>'?></h3>
 		
 		<p><?php echo $item['description'] ?></p>
 		<?php
