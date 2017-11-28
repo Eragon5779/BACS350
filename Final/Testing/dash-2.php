@@ -16,8 +16,6 @@ $userInfo = array('username'=>$row['username'], 'email'=>$row['email'], 'firstNa
 
 $stmt = $db->prepare('SELECT id, title FROM items where op = :op');
 $stmt->execute(array(':op' => $currentUser));
-$row = $stmt->fetch(PDO::FETCH_ASSOC);
-$items = array('id'=>$row['id'], 'title'=>$row['title']);
 
 $title = $currentUser;
 require("layout/header.php");
@@ -26,13 +24,14 @@ require("layout/header.php");
 
 <body>
 
-    <h1><?php echo $_SESSION['firstName'] ?>'s Profile</h1>
-
+    <h1><?php echo $userInfo['firstName'] ?>'s Profile</h1>
+    <br />
     <h3>Their items</h3>
     <ul>
     <?php
 
-        foreach ($items as &$item) {
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $item = array('id'=>$row['id'], 'title'=>$row['title']);
             echo '<li><a href="product.php?id=' . $item['id'] . '">' . $item['title'] . '</li>';
         }
 
