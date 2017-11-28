@@ -41,7 +41,7 @@
 			<nav id="l">CATEGORIES</nav>
 			<form id="r">
 			<input type="text" placeholder="search"></input>
-			<input id="b" type="button" action="search.php" method="get">Button</input>
+			<input id="butt" type="button" value="Submit" action="search.php" method="get"></input>
 			</form>
 			<img src="media/logo.png"></img>
 		</div>
