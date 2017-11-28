@@ -32,7 +32,7 @@ require("layout/header.php");
 
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $item = array('id'=>$row['id'], 'title'=>$row['title']);
-            echo '<li><a href="product.php?id=' . $item['id'] . '">' . $item['title'] . '</li>';
+            echo '<li><a href="product.php?id=' . $item['id'] . '">' . $item['title'] . '</a></li>';
         }
 
     ?>
