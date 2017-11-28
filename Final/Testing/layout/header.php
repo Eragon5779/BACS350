@@ -39,9 +39,9 @@
 			
 		<div>
 			<nav id="l">CATEGORIES</nav>
-			<form id="r">
+			<form id="r" action="search" method="get">
 			<input type="text" placeholder="search"></input>
-			<input style="margin-top:2.5em;" class="butt" type="button" value="Submit" action="search.php" method="get"></input>
+			<input style="margin-top:2.5em;" class="butt" type="submit" value="Submit"></input>
 			</form>
 			<img src="media/logo.png"></img>
 		</div>
