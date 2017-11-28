@@ -40,8 +40,8 @@
 		<div>
 			<nav id="l">CATEGORIES</nav>
 			<form id="r" action="search.php" method="get">
-			<input type="text" name="keyword" placeholder="search"></input>
-			<input style="margin-top:2.5em;width:30%;" class="butt" type="submit" value="Submit"></input>
+			<input style="margin-right:35%;" type="text" name="keyword" placeholder="search"></input>
+			<input style="width:30%;" class="butt" type="submit" value="Submit"></input>
 			</form>
 			<img src="media/logo.png"></img>
 		</div>
