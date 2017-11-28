@@ -9,7 +9,7 @@ else {
     $currentUser = $_GET['username'];
 }
 
-$stmt = $db->prepare('SELECT username, email, firstName, FROM users where username = :username');
+$stmt = $db->prepare('SELECT username, email, firstName FROM users where username = :username');
 $stmt->execute(array(':username' => $currentUser));
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $user = array('username'=>$row['username'], 'email'=>$row['email'], 'firstName'=>$row['firstName']);
