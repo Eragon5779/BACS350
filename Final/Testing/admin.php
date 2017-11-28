@@ -14,6 +14,10 @@ $stmt->execute(array(':username' => $currentUser));
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $userInfo = array('username'=>$row['username'], 'email'=>$row['email'], 'firstName'=>$row['firstName'], 'admin'=>$row['admin']);
 
+if ($userInfo['admin'] == FALSE) {
+    header("Location: dash-2.php");
+}
+
 $title = $currentUser;
 require("layout/header.php");
 

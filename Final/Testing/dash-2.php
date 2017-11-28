@@ -17,7 +17,7 @@ $userInfo = array('username'=>$row['username'], 'email'=>$row['email'], 'firstNa
 $stmt = $db->prepare('SELECT id, title FROM items where op = :op');
 $stmt->execute(array(':op' => $currentUser));
 
-if ($userInfo['admin'] === TRUE) {
+if ($userInfo['admin'] == TRUE) {
     header("Location: admin.php");
 }
 
