@@ -14,13 +14,6 @@ $stmt->execute(array(':username' => $currentUser));
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $userInfo = array('username'=>$row['username'], 'email'=>$row['email'], 'firstName'=>$row['firstName'], 'admin'=>$row['admin']);
 
-$stmt = $db->prepare('SELECT id, title FROM items where op = :op');
-$stmt->execute(array(':op' => $currentUser));
-
-if ($userInfo['admin'] === TRUE) {
-    header("Location: admin.php");
-}
-
 $title = $currentUser;
 require("layout/header.php");
 
