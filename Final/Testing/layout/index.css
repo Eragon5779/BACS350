@@ -63,15 +63,20 @@ header div nav {
 }
 header div #r {
 	right:0;
+	top:1em;
+	width:50vw;
+	background-color:#333;
+	height:2em;
 	text-align:center;
 }
 header div #r input {
+	height:1em;
 	top:12.5%;
 	right:0.5em;
 	position:absolute;
 	background-color:#eee;
 	color:#333;
-	width:65%;
+	width:60%;
 	padding:0.25em;
 	border:0;
 }
