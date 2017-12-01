@@ -36,13 +36,14 @@ $currentIsLogged = ($currentUser == $_SESSION['username']);
     }
     ?> Profile</h1>
     <br />
-    <h3><?php 
+    <h2><?php 
     if ($currentIsLogged) {
         echo 'Your';
     } else {
         echo $currentUser . '\'s';
     }
-    ?> items</h3>
+    ?> items</h2>
+    <br />
     <ul>
     <?php
 

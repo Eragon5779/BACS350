@@ -36,13 +36,14 @@ $currentIsLogged = ($currentUser == $_SESSION['username']);
     }
     ?> Profile</h1>
     <br />
-    <h3><?php 
+    <h2><?php 
     if ($currentIsLogged) {
         echo 'Your';
     } else {
         echo $currentUser . '\'s';
     }
-    ?> items</h3>
+    ?> items</h2>
+    <br />
     <ul>
     <?php
 
@@ -53,6 +54,19 @@ $currentIsLogged = ($currentUser == $_SESSION['username']);
 
     ?>
     </ul>
+
+    <br />
+    <?php
+
+        if ($currentIsLogged) {
+            echo '<h2>Update Your Profile:</h2>' . 
+                 '<ul>' . 
+                 '<li><a href="additem.php">Add New Item</a></li>' . 
+                 '<li><a href="updateuser.php">Change Information</a></li>' .
+                 '</ul>';
+        }
+
+    ?>
 
 <?php
 
