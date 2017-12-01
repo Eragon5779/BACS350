@@ -80,6 +80,9 @@ header div #r input {
 	padding:0.25em;
 	border:0;
 }
+header div #r #sub {
+	height:1.5em !important;
+}
 
 header div img {
 	position:absolute;
