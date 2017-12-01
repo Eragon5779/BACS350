@@ -6,7 +6,7 @@ require("layout/header.php");
 
 <body>
 
-	<form enctype="multipart/form-data" action="includes/newitem.php" method="POST">
+	<form enctype="multipart/form-data" action="newitem.php" method="POST">
 	  Title:<br>
 	  <input type="text" name="title" placeholder="Title">
 	  <br>
