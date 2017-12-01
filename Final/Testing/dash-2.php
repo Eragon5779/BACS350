@@ -23,13 +23,13 @@ if ($userInfo['admin'] == TRUE) {
 
 $title = $currentUser;
 require("layout/header.php");
-
+$currentIsLogged = ($currentUser == $_SESSION['username']);
 ?>
 
 <body style="background-color: #333;">
 
     <h1><?php 
-    if ($currentUser == $_SESSION['username']) {
+    if ($currentIsLogged) {
         echo 'Your'; 
     } else {
         echo $currentUser . '\'s';
@@ -37,7 +37,7 @@ require("layout/header.php");
     ?> Profile</h1>
     <br />
     <h3><?php 
-    if ($currentUser == $_SESSION['username']) {
+    if ($currentIsLogged) {
         echo 'Your';
     } else {
         echo $currentUser . '\'s';
@@ -53,6 +53,11 @@ require("layout/header.php");
 
     ?>
     </ul>
+    <?php
+
+        if ($currentUser == )
+
+    ?>
 
 <?php
 
