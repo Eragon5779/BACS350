@@ -21,7 +21,7 @@ mkdir('media/items/' . $max_id);
 $directory = 'media/items/' . $max_id;
 
 $fileName = $_FILES['myfile']['name'];
-echo $fileName;
+echo 'Filename: ' . $fileName . '';
 $fileSize = $_FILES['myfile']['size'];
 echo $fileSize;
 $fileTmpName = $_FILES['myfile']['tmp_name'];
