@@ -8,6 +8,7 @@ $max_id = $id['max_id'] + 1;
 mkdir('media/items/' . $max_id);
 
 $directory = 'media/items/' . $max_id;
+$target = $directory . $_FILES['image']['name'];
 
 $fileName = $_FILES['image']['name'];
 echo 'Filename: ' . $fileName . '';
