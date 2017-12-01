@@ -36,7 +36,7 @@ require("layout/header.php");
     } else {
         echo $currentUser . '\'s';
     }
-    ?>items</h3>
+    ?> items</h3>
     <ul>
     <?php
 
