@@ -25,6 +25,12 @@ $fileSize = $_FILES['myfile']['size'];
 $fileTmpName = $_FILES['myfile']['tmp_name'];
 $fileType = $_FILES['myfile']['type'];
 $fileExtension = strtolower(end(explode('.', $fileName)));
-move_uploaded_file($fileTempName, $directory);
-
+if (move_uploaded_file($fileTempName, $directory)) {
+    echo '<h1>File uploaded succeeded</h1><br />' . 
+         '<a href="../index.php">Click here to return to home</a>';
+}
+else {
+    echo '<h1>Upload failed. Please try again later</h1><br />' . 
+         '<a href="../index.php">Click here to return to home</a>';
+}
 ?>
