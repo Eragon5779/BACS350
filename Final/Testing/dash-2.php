@@ -28,9 +28,21 @@ require("layout/header.php");
 
 <body style="background-color: #333;">
 
-    <h1><?php echo $userInfo['firstName'] ?>'s Profile</h1>
+    <h1><?php 
+    if ($currentUser == $_SESSION['username']) {
+        echo 'Your'; 
+    } else {
+        echo $currentUser . '\'s';
+    }
+    ?> Profile</h1>
     <br />
-    <h3>Their items</h3>
+    <h3><?php 
+    if ($currentUser == $_SESSION['username']) {
+        echo 'Your';
+    } else {
+        echo $currentUser . '\'s';
+    }
+    ?>items</h3>
     <ul>
     <?php
 
