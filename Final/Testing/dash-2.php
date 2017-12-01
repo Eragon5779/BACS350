@@ -17,13 +17,13 @@ $userInfo = array('username'=>$row['username'], 'email'=>$row['email'], 'firstNa
 $stmt = $db->prepare('SELECT id, title FROM items where op = :op');
 $stmt->execute(array(':op' => $currentUser));
 
-if ($userInfo['admin'] == TRUE) {
+$currentIsLogged = ($currentUser == $_SESSION['username']);
+if ($userInfo['admin'] == TRUE && $currentIsLogged) {
     header("Location: admin.php");
 }
 
 $title = $currentUser;
 require("layout/header.php");
-$currentIsLogged = ($currentUser == $_SESSION['username']);
 ?>
 
 <body style="background-color: #333;">
