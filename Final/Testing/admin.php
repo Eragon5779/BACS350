@@ -1,5 +1,4 @@
-<?php require("includes/config.php");
-
+<?php 
 require("dash-2.php");
 ?>
 
