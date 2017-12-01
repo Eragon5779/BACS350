@@ -18,7 +18,7 @@ $fileTmpName = $_FILES['image']['tmp_name'];
 echo $fileTmpName;
 $fileType = $_FILES['image']['type'];
 $fileExtension = strtolower(end(explode('.', $fileName)));
-if (move_uploaded_file($fileTempName, $directory)) {
+if (move_uploaded_file($fileTempName, $target)) {
     $stmt = $db->prepare('INSERT INTO items (title, description, currentBid, bidHistory, endTime, reserve, op) VALUES (:title, :description, :currentBid, :bidHistory, :endTime, :reserve, :op)');
     $stmt->execute(array(
         ':title' => $_POST['title'],
