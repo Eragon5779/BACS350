@@ -4,12 +4,7 @@ $stmt = $db->prepare("SELECT MAX(id) AS max_id FROM items");
 $stmt -> execute();
 $id = $stmt -> fetch(PDO::FETCH_ASSOC);
 $max_id = $id['max_id'] + 1;
-try {
-    mkdir('media/items/' . $max_id);
-}
-catch(Exception $e) {
-    echo 'Directory existed';
-}
+mkdir('media/items/' . $max_id);
 
 $directory = 'media/items/' . $max_id;
 $target = $directory . $_FILES['image']['name'];
@@ -22,7 +17,7 @@ $fileTmpName = $_FILES['image']['tmp_name'];
 //echo $fileTmpName;
 $fileType = $_FILES['image']['type'];
 $fileExtension = strtolower(end(explode('.', $fileName)));
-if (move_uploaded_file($fileTempName, $target)) {
+if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
     $stmt = $db->prepare('INSERT INTO items (title, description, currentBid, bidHistory, endTime, reserve, op) VALUES (:title, :description, :currentBid, :bidHistory, :endTime, :reserve, :op)');
     $stmt->execute(array(
         ':title' => $_POST['title'],
