@@ -21,8 +21,11 @@ mkdir('media/items/' . $max_id);
 $directory = 'media/items/' . $max_id;
 
 $fileName = $_FILES['myfile']['name'];
+echo $fileName;
 $fileSize = $_FILES['myfile']['size'];
+echo $fileSize;
 $fileTmpName = $_FILES['myfile']['tmp_name'];
+echo $fileTmpName;
 $fileType = $_FILES['myfile']['type'];
 $fileExtension = strtolower(end(explode('.', $fileName)));
 if (move_uploaded_file($fileTempName, $directory)) {
