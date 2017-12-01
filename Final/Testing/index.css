@@ -141,4 +141,25 @@
 		height:20em;
 		top:15%;
 	}
+	
+/* Tablet Portrait layout (768 to 959px)*/
+@media only screen and (max-width: 959px){
+	
 }
+
+/* mobile landscape layout (480px to 800px) */
+@media only screen and (max-width: 800px) {
+	
+	p{
+		size: .9em;
+	}
+	.slide {
+		height: 40em;
+	}
+}
+
+/* mobile portrait to mobile landscape  */
+@media only screen and (max-width: 479px) {
+	
+}	
+	
