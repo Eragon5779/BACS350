@@ -53,11 +53,6 @@ $currentIsLogged = ($currentUser == $_SESSION['username']);
 
     ?>
     </ul>
-    <?php
-
-        if ($currentUser == )
-
-    ?>
 
 <?php
 
