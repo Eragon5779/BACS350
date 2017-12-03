@@ -120,7 +120,7 @@
         
         <?php
 
-            if (!$matched) {
+            if ($matched) {
                 echo 'Please enter a new password<br>';
             }
 
