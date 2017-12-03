@@ -85,27 +85,27 @@
   </div>
 <div class="container ">
   <div class="row">
-      <div class="col-lg-4 col-sm-12 text-center"> <img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="https://iaa-auctions.com/wp-content/uploads/2016/09/BuyingServices_OnsiteBidPaddle_Icon.svg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"> <img alt="current bids" class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="https://iaa-auctions.com/wp-content/uploads/2016/09/BuyingServices_OnsiteBidPaddle_Icon.svg" data-holder-rendered="true">
         <h3>Current Bids</h3>
         <p>View current bids you are participating in that are still ongoing, as well as history of past bids.</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="http://www.endlessicons.com/wp-content/uploads/2014/03/bookmark-icon-3.png" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img alt="bookmarks" class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="http://www.endlessicons.com/wp-content/uploads/2014/03/bookmark-icon-3.png" data-holder-rendered="true">
         <h3>Bookmarked</h3>
         <p>Art listing's you have bookmarked for later viewing.</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="https://image.freepik.com/free-icon/notification_318-41075.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img alt="notifications" class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="https://image.freepik.com/free-icon/notification_318-41075.jpg" data-holder-rendered="true">
         <h3>Notification Settings</h3>
         <p>Notification Settings for the site, and any bids you are currently active in.</p>
       </div>
-      <?php $firstName = $_SESSION['firstName']; echo '<div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="/media/' . $firstName . '.jpg" data-holder-rendered="true">';?>
+      <?php $firstName = $_SESSION['firstName']; echo '<div class="col-lg-4 col-sm-12 text-center"><img alt="user icon" class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="/media/' . $firstName . '.jpg" data-holder-rendered="true">';?>
         <h3>Profile Settings</h3>
         <p>Profile Settings to modify your public presence on the site.</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="https://image.freepik.com/free-icon/security-symbol_318-31394.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img alt="security settings" class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="https://image.freepik.com/free-icon/security-symbol_318-31394.jpg" data-holder-rendered="true">
         <h3>Security Settings</h3>
         <p>Security settings for changing your password, deleting your account, or reporting site misuse.</p>
       </div>
-      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="https://image.freepik.com/free-icon/gear-interface-symbol-for-configuration_318-61466.jpg" data-holder-rendered="true">
+      <div class="col-lg-4 col-sm-12 text-center"><img alt="settings" class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="https://image.freepik.com/free-icon/gear-interface-symbol-for-configuration_318-61466.jpg" data-holder-rendered="true">
         <h3>UI Settings</h3>
         <p>Change the site's look to suit your preference.</p>
       </div>
