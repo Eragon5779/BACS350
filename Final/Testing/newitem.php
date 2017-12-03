@@ -29,7 +29,8 @@ if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
         ':op' => $_SESSION['username']
     ));
     echo '<h1>File uploaded succeeded</h1><br />' . 
-         '<a href="index.php">Click here to return to home</a>';
+         '<a href="index.php">Click here to return to home if you are not automatically redirected</a>';
+         header("Location: index.php");
 }
 else {
     echo '<h1>Upload failed. Please try again later</h1><br />' . 

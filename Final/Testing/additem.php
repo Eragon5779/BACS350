@@ -2,6 +2,9 @@
 
 $title = 'Add New Item';
 require("layout/header.php");
+if (!$user->is_logged_in()) {
+	header("Location: index.php");
+}
 ?>
 
 <body>
