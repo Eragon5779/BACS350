@@ -7,7 +7,7 @@ if (!$user->is_logged_in()) {
 }
 ?>
 
-<body>
+<body style="background-color: #333;">
 
 	<form enctype="multipart/form-data" action="newitem.php" method="POST">
 	  Title:<br>
