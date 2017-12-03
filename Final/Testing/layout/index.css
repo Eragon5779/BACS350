@@ -76,7 +76,7 @@ header div #r input {
 	position:absolute;
 	background-color:#eee;
 	color:#333;
-	width:60%;
+	width:20vw;
 	padding:0.25em;
 	border:0;
 }
@@ -90,4 +90,11 @@ header div img {
 	margin:-1em -3.5em;
 	border-radius:100%;
 	height:6em;
+}
+
+@media screen and (min-width:550) {
+	header div img {
+		height:4em;
+		margin:0em -2.5em;
+	}
 }
