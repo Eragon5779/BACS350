@@ -100,9 +100,9 @@
         
         E-Mail:<br>
         <input type="text" name="email" placeholder="E-Mail">
-        <br>
+        <br><br>
 
-        <h2>The following is only required if changing your password:</h2>
+        <h3>The following is only required if changing your password:</h3>
         <br>
 
         <?php 
