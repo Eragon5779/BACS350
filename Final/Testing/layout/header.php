@@ -62,12 +62,12 @@ if(isset($_POST['submit'])){
 			?>
 			</form>
 			
-		<div>
+		<div title="hero image, navbar">
 			<nav id="l">CATEGORIES</nav>
 			<form id="r" action="search.php" method="get">
 			<input style="margin-right:30%;" type="text" name="keyword" placeholder="search"></input>
 			<input id="sub" style="width:27.5%;" type="submit" value="Submit"></input>
 			</form>
-			<img src="media/logo.png"></img>
+			<img alt="site logo" src="media/logo.png"></img>
 		</div>
 	</header>
