@@ -66,6 +66,7 @@
                     ':email' => $newEmail,
                     ':username' => $_SESSION['username']
                 ));
+                $updated = TRUE;
             }
         }
         else {
@@ -76,6 +77,7 @@
                 ':email' => $newEmail,
                 ':username' => $_SESSION['username']
             ));
+            $updated = TRUE;
         }
     }
 
