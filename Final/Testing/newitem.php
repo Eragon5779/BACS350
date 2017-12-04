@@ -26,7 +26,8 @@ if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
         ':bidHistory' => '',
         ':endTime' => NULL,
         ':reserve' => $_POST['reserve'],
-        ':op' => $_SESSION['username']
+        ':op' => $_SESSION['username'],
+        ':tags' => $_POST['tags']
     ));
     echo '<h1>File uploaded succeeded</h1><br />' . 
          '<a href="index.php">Click here to return to home if you are not automatically redirected</a>';

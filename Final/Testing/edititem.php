@@ -1,5 +1,7 @@
 <?php require("includes/config.php");
 
+$id = $_POST['id'];
+
 $title = 'Edit Item';
 require("layout/header.php");
 if (!$user->is_logged_in()) {
@@ -9,7 +11,7 @@ if (!$user->is_logged_in()) {
 
 <body style="background-color: #333;">
 
-	<form enctype="multipart/form-data" action="newitem.php" method="POST">
+	<form enctype="multipart/form-data" action="moditem.php" method="POST">
 	  Title:<br>
 	  <input type="text" name="title" placeholder="Title">
 	  <br>
@@ -21,6 +23,8 @@ if (!$user->is_logged_in()) {
       Tags:<br>
       <input type="text" name="tags" placeholder="Tags">
       <br>
+
+      <input type="hidden" name="id" value="<?php echo $id ?>">
       
 	  <p>Click "Submit" to update information</p>
 
