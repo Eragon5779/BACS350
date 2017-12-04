@@ -102,6 +102,7 @@ header div img {
 
 #nav_menu ul li{
 	float: left;
+	display: none;
 }
 
 #nav_menu ul li a{
@@ -112,20 +113,6 @@ header div img {
 	text-decoration: none;
 	color: Black;
 	font-weight: bold;
-}
-
-#nav_menu ul li a.current {
-	background-color: grey;
-}
-
-#nav_menu ul ul{
-	display: none;
-	position: absolute;
-	top: 100%
-}
-
-#nav_menu ul ul li{
-	float: none;
 }
 
 #nav_menu ul li:hover> ul {
