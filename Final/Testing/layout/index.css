@@ -20,7 +20,7 @@ header form * {
 header form p {
 	color:#eee !important;
 }
-#sumbitButton {
+#submitButton {
 	width:100%;
 	height:1.5em;
 	padding:0;
@@ -28,7 +28,7 @@ header form p {
 	background:none;
 	float:right;
 }
-#sumbitButton * {
+#submitButton * {
 	background-color:#ddd;
 	text-decoration:none;
 	width:47.5%;
@@ -36,7 +36,7 @@ header form p {
 	margin:0;
 	height:100%;
 }
-#sumbitButton button {
+#submitButton button {
 	position:absolute;
 	right:0 !important;
 	float:right;
