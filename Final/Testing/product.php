@@ -27,9 +27,12 @@
 				<form action="bid.php" method="post">
 				Your Bid: $<input type="text" name="bid" id="bid" value="' . ($item['currentBid'] + .01) . '">
 				<input type="hidden" name="history" id="history" value="' . $item['bidHistory'] . '">
-				<input type="hidden" name="id" id="id" value="' . $currentID . '">
-				<input type="submit" name="submit" id="submit" value="Bid">
-			</form>';
+				<input type="hidden" name="id" id="id" value="' . $currentID . '">';
+				if ($_SESSION['username'] != $item['op']) {
+					echo '<input type="submit" name="submit" id="submit" value="Bid">';
+				}
+				
+			echo '</form>';
 			}
 			else {
 				echo 'Please sign in/register to bid<br><br>';
@@ -37,7 +40,7 @@
 			if ($_SESSION['username'] == $item['op']) {
 				echo '<form action="edititem.php" method="POST">
 					  <input type="hidden" name="id2" id="id2" value="' . $item['id'] . '">
-					  <input type="submit2" name="submit2" id="submit2" value="Edit">
+					  <input type="submit" name="submit2" id="submit2" value="Edit">
 					  </form>';
 			}
 			
