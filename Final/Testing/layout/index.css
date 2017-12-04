@@ -92,6 +92,56 @@ header div img {
 	height:6em;
 }
 
+/*Style for nav_menu*/
+#nav_menu ul{
+	list-style-type: none;
+	padding: 0;
+	position: relative;
+	border-bottom: 5px solid black;
+}
+
+#nav_menu ul li{
+	float: left;
+}
+
+#nav_menu ul li a{
+	width: 240px;
+	text-align: center;
+	display: block;
+	padding: 1em 0;
+	text-decoration: none;
+	color: Black;
+	font-weight: bold;
+}
+
+#nav_menu ul li a.current {
+	background-color: grey;
+}
+
+#nav_menu ul ul{
+	display: none;
+	position: absolute;
+	top: 100%
+}
+
+#nav_menu ul ul li{
+	float: none;
+}
+
+#nav_menu ul li:hover> ul {
+	display: block;
+	border: none;
+	background-color: lightgrey;
+	border: none;
+}
+
+	
+#nav_menu > ul::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
 @media screen and (min-width:550) {
 	header div img {
 		height:4em;
