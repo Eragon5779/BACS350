@@ -1,7 +1,7 @@
-<!--PHP script initialized into the webpage-->
 <?php
-///include config
 require_once('includes/config.php');
+//PHP script initialized into the webpage
+///include config
 
 //check if already logged in move to home page
 //if( $user->is_logged_in() ){ header('Location: index.php'); exit(); }

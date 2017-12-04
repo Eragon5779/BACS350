@@ -22,7 +22,8 @@ if(isset($_POST['submit'])){
 	}
 }
 
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
