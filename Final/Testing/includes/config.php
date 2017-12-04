@@ -1,6 +1,10 @@
 <?php
 ob_start();
-session_start();
+if(!isset($_SESSION))
+{
+    session_start();
+}
+
 
 //set timezone
 date_default_timezone_set('America/Denver');
