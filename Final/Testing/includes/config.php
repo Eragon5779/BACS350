@@ -1,6 +1,6 @@
 <?php
 ob_start();
-if(!isset($_SESSION))
+if(session_status() != PHP_SESSION_ACTIVE)
 {
     session_start();
 }
