@@ -93,30 +93,13 @@ header div img {
 }
 
 /*Style for nav_menu*/
-#nav_menu ul{
+#nav_menu ul li{
 	list-style-type: none;
 	padding: 0;
 	position: relative;
 }
 
-#nav_menu ul li{
-	float: left;
-	display:none;
-}
 
-#nav_menu ul li:hover> ul {
-	display: block;
-	border: none;
-	background-color: lightgrey;
-	border: none;
-}
-
-	
-#nav_menu > ul::after{
-	content: "";
-	display: block;
-	clear: both;
-}
 
 @media screen and (min-width:550) {
 	header div img {
