@@ -20,7 +20,7 @@ header form * {
 header form p {
 	color:#eee !important;
 }
-#KILLME {
+#sumbit_button {
 	width:100%;
 	height:1.5em;
 	padding:0;
@@ -28,7 +28,7 @@ header form p {
 	background:none;
 	float:right;
 }
-#KILLME * {
+#sumbit_button * {
 	background-color:#ddd;
 	text-decoration:none;
 	width:47.5%;
@@ -36,7 +36,7 @@ header form p {
 	margin:0;
 	height:100%;
 }
-#KILLME button {
+#sumbit_button button {
 	position:absolute;
 	right:0 !important;
 	float:right;

@@ -53,7 +53,7 @@ if(isset($_POST['submit'])){
 				echo '<p>Hello, Anon</p>
 				<input type="text" name="username" id="name" placeholder="username"><br>
 				<input type="password" name="password" id="password" placeholder="password"><br>
-				<div id="KILLME">
+				<div id="submit_button">
 				<input type="submit" name="submit" value="Login">
 				<button type="button"><a href="/users/casey/Testing/register.php">Register</a></button>
 				</div>';
@@ -72,7 +72,7 @@ if(isset($_POST['submit'])){
 							<li><a href="search.php?keyword=furry">Furry</a></li>
 						</ul>
 					</li>
-				</ul
+				</ul>
 			</nav>
 					
 			<form id="r" action="search.php" method="get">
