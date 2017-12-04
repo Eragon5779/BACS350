@@ -7,5 +7,5 @@ $stmt -> execute(array(
     ':tags' => $_POST['tags'],
     ':id' => $_POST['id']
 ));
-header('Location: item.php?id=' . $_POST['id']);
+header('Location: product.php?id=' . $_POST['id']);
 ?>
