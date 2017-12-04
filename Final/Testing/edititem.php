@@ -28,8 +28,7 @@ if (!$user->is_logged_in()) {
 
 	  <input type="submit" value="Submit">
 
-	</form> 
-    <?php echo $id ?>
+	</form>
 
 </body>
 </html>
