@@ -1,3 +1,4 @@
+<!--PHP script initialized into the webpage-->
 <?php
 ///include config
 require_once('includes/config.php');
@@ -40,6 +41,7 @@ $title = 'YCH';
 //include header template
 require('layout/header.php'); 
 ?>
+	<!--Holds the slideshow that is used to display recent items and items on display-->
 
 	<div id="slideshow">
 		<img alt="hayfields YCH" class="slide" src="media/hayfields.png">
