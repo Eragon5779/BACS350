@@ -35,7 +35,7 @@
 				echo 'Please sign in/register to bid<br><br>';
 			}
 			if ($_SESSION['username'] == $item['op']) {
-				echo '<form action="edititem.php" method="POST">
+				echo '<form action="edititem.php" method="post">
 					  <input type="hidden" name="id2" id="id2" value="' . $item['id'] . '">
 					  <input type="submit" name="submit2" id="submit2" value="Edit">
 					  </form>';

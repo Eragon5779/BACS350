@@ -1,7 +1,6 @@
 <?php require("includes/config.php");
 
 $id = $_POST['id2'];
-echo $_POST['id2'];
 require("layout/header.php");
 if (!$user->is_logged_in()) {
 	header("Location: index.php");
