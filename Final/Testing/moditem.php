@@ -1,4 +1,4 @@
-<?php require("includes/config.php");
+<?php require_once("includes/config.php");
 
 $stmt = $db->prepare("UPDATE items SET title=:title, description=:description, tags=:tags WHERE id=:id");
 $stmt -> execute(array(

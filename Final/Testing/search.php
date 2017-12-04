@@ -1,4 +1,4 @@
-<?php require('includes/config.php');
+<?php require_once('includes/config.php');
 
 	$search = $_GET["keyword"];
 	$stmt = $db->prepare('SELECT id, title, description, currentBid, tags, op FROM items where CONCAT(title, description, op, tags) LIKE :search');

@@ -1,5 +1,5 @@
 
-<?php
+<?php require("includes/config.php");
 //Login Script
 if(isset($_POST['submit'])){
 	if (!isset($_POST['username'])) $error[] = "Please fill out all fields";

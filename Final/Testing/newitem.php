@@ -1,4 +1,4 @@
-<?php require("includes/config.php");
+<?php require_once("includes/config.php");
 
 $stmt = $db->prepare("SELECT MAX(id) AS max_id FROM items");
 $stmt -> execute();
