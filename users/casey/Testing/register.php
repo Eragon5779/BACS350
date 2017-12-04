@@ -55,6 +55,16 @@ if(isset($_POST['submit'])){
 
 	}
 
+	$first_name = $_POST['first_name'];
+	$last_name = $_POST['last_name'];
+
+	if (!ctype_alpha($first_name)) {
+		$error[] = 'First name must contain only letters';
+	}
+
+	if (!ctype_alpha($last_name)) {
+		$error[] = 'Last name must contain only letters';
+	}
 
 	//if no errors have been created carry on
 	if(!isset($error)){
@@ -65,9 +75,6 @@ if(isset($_POST['submit'])){
 		];
 		//hash the password
 		$pass_hash = $user->password_hash($_POST['password'], PASSWORD_BCRYPT, $options);
-
-		$first_name = $_POST['first_name'];
-		$last_name = $_POST['last_name'];
 
 		try {
 

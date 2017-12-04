@@ -11,7 +11,7 @@
 	require('layout/header.php'); 
 ?>
 
-	<?php echo '<div class="product" style="background-image: url(' . $images[0] . ');">' ?>
+	<?php echo '<div class="product" style="background-image: url(' . $images[0] . ');" title="' . $images['title'] . '">' ?>
 
 		<div>
 		<h2><?php echo $item['title'] ?></h2>

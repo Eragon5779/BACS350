@@ -16,7 +16,7 @@
 			$item = array('id'=>$row['id'], 'title'=>$row['title'], 'description'=>$row['description'], 'currentBid'=>$row['currentBid'], 'op'=>$row['op']);
 			$images = glob("media/items/" . $item['id'] . "/*.*");
 		
-			echo '<div class="product" style="background-image: url(' . $images[0] . ');"> 
+			echo '<div class="product" style="background-image: url(' . $images[0] . ');" title="' . $images['title'] . '"> 
 
 			<div>
 			<h2><a href="product.php?id=' . $item['id'] . '">' . $item['title'] . '</a></h2>
