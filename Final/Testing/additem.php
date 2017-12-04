@@ -22,8 +22,12 @@ if (!$user->is_logged_in()) {
 	  <input type="text" name="reserve" placeholder="Reserve">
 	  <br>
 
-	  Tags:<br>
-      <input type="text" name="tags" placeholder="Tags">
+	  Tag:<br>
+		<select>
+			<option value="human">Human</option>
+			<option value="pony">Pony</option>
+			<option value="furry">Furry</option>
+		</select>
 	  <br><br><br>
 	  
 	  File Upload: <br> <bR>
