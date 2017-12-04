@@ -1,4 +1,4 @@
-<?php require_once('includes/config.php');
+<?php require('includes/config.php');
 
 	$currentID = $_GET["id"];
 	$stmt = $db->prepare('SELECT title, description, currentBid, op, tags, bidHistory FROM items where id = :id');

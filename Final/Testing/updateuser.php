@@ -1,4 +1,4 @@
-<?php require_once("includes/config.php");
+<?php require("includes/config.php");
 
     $title = 'Update User: ' . $_SESSION['username'];
     require("layout/header.php");

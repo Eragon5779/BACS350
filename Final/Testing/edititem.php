@@ -1,4 +1,4 @@
-<?php require_once("includes/config.php");
+<?php require("includes/config.php");
 
 $id = $_POST['id2'];
 require("layout/header.php");

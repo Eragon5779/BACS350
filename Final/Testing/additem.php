@@ -1,4 +1,4 @@
-<?php require_once("includes/config.php");
+<?php require("includes/config.php");
 // assigns the "add new item" string to the $title variable
 $title = 'Add New Item';
 // put the header into the page

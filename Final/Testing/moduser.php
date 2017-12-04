@@ -1,4 +1,4 @@
-<?php require_once("includes/config.php");
+<?php require("includes/config.php");
 
     // Must be logged in to update user information
     if ($_SESSION['username'] == NULL) {
