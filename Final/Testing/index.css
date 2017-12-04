@@ -107,10 +107,10 @@
 .product div{
 	background-color: #333;
 	width: 30%;
-	height: 12em;
+	height: 16em;
 	float: right;
 	margin-right: 2em;
-	margin-top: 10em;
+	margin-top: 8em;
 	margin-bottom: 2em;
 	text-overflow: ellipsis;
 }
