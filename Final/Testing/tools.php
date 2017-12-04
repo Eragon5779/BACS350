@@ -18,7 +18,7 @@ if (!$userInfo['admin']) {
 $stmt = $db->prepare('SELECT * FROM items');
 $stmt->execute();
 
-echo '<table name="items">';
+echo '<body style="background-color: #333"><table name="items">';
 
 echo '<tr>
       <th>ID</th>
@@ -49,6 +49,8 @@ while($row=$stmt->fetch(PDO::FETCH_ASSOC)) {
 }
 
 echo '</table>';
+
+
 
 ?>
 
