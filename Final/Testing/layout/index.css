@@ -114,7 +114,8 @@ header div img {
 
 #nav_menu ul li:hover> ul{
 	display: block;	
-	background-color: lightgrey;
+	background-color: #333;
+	width: 50%;
 }
 
 
