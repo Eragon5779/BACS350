@@ -1,6 +1,6 @@
 <?php require("includes/config.php");
 
-$id = $_POST['id'];
+$id = $_POST['id2'];
 
 $title = 'Edit Item';
 require("layout/header.php");
