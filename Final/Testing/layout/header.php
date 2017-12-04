@@ -54,7 +54,7 @@ if(isset($_POST['submit'])){
 				echo '<p>Hello, Anon</p>
 				<input type="text" name="username" id="name" placeholder="username"><br>
 				<input type="password" name="password" id="password" placeholder="password"><br>
-				<div id="submit_button">
+				<div id="submitButton">
 				<input type="submit" name="submit" value="Login">
 				<button type="button"><a href="/users/casey/Testing/register.php">Register</a></button>
 				</div>';

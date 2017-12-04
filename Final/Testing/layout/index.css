@@ -20,7 +20,7 @@ header form * {
 header form p {
 	color:#eee !important;
 }
-#sumbit_button {
+#submitButton {
 	width:100%;
 	height:1.5em;
 	padding:0;
@@ -28,7 +28,7 @@ header form p {
 	background:none;
 	float:right;
 }
-#sumbit_button * {
+#submitButton * {
 	background-color:#ddd;
 	text-decoration:none;
 	width:47.5%;
@@ -36,7 +36,7 @@ header form p {
 	margin:0;
 	height:100%;
 }
-#sumbit_button button {
+#submitButton button {
 	position:absolute;
 	right:0 !important;
 	float:right;
@@ -70,7 +70,7 @@ header div #r {
 	text-align:center;
 }
 header div #r input {
-	height:1.5em;
+	height:1em;
 	top:12.5%;
 	right:0.5em;
 	position:absolute;
@@ -97,6 +97,25 @@ header div img {
 	list-style-type: none;
 	padding: 0;
 	position: relative;
+}
+
+#nav_menu ul li ul li a{
+	text-align: center;
+	display: block;
+	padding: 1em 0;
+	text-decoration: none;
+	color: White;
+	font-weight: bold;
+}
+
+#nav_menu ul li ul{
+	display: none;
+}
+
+#nav_menu ul li:hover> ul{
+	display: block;	
+	background-color: #333;
+	width: 50%;
 }
 
 
