@@ -72,7 +72,7 @@ if(isset($_POST['submit'])){
 							<li><a href="search.php?keyword=furry">Furry</a></li>
 						</ul>
 					</li>
-				</ul
+				</ul>
 			</nav>
 					
 			<form id="r" action="search.php" method="get">
