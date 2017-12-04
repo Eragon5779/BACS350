@@ -63,15 +63,18 @@ if(isset($_POST['submit'])){
 			</form>
 			
 		<div title="hero image, navbar">
-			<nav id="categories">
-				<li>Categories
-					<ul>
-						<li><a href="search.php?keyword=human">Human</a></li>
-						<li><a href="search.php?keyword=pony">Pony</a></li>
-						<li><a href="search.php?keyword=furry">Furry</a></li>
-					</ul>
-				</li>
+			<nav id="nav_menu">
+				<ul>
+					<li>Categories
+						<ul>
+							<li><a href="search.php?keyword=human">Human</a></li>
+							<li><a href="search.php?keyword=pony">Pony</a></li>
+							<li><a href="search.php?keyword=furry">Furry</a></li>
+						</ul>
+					</li>
+				</ul
 			</nav>
+					
 			<form id="r" action="search.php" method="get">
 			<input style="margin-right:30%;" type="text" name="keyword" placeholder="search"></input>
 			<input id="sub" style="width:27.5%;" type="submit" value="Submit"></input>
