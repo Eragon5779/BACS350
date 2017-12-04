@@ -70,7 +70,7 @@ header div #r {
 	text-align:center;
 }
 header div #r input {
-	height:1em;
+	height:1.5em;
 	top:12.5%;
 	right:0.5em;
 	position:absolute;
@@ -97,22 +97,11 @@ header div img {
 	list-style-type: none;
 	padding: 0;
 	position: relative;
-	border-bottom: 5px solid black;
 }
 
 #nav_menu ul li{
 	float: left;
-	display: none;
-}
-
-#nav_menu ul li a{
-	width: 240px;
-	text-align: center;
-	display: block;
-	padding: 1em 0;
-	text-decoration: none;
-	color: Black;
-	font-weight: bold;
+	display:none;
 }
 
 #nav_menu ul li:hover> ul {
