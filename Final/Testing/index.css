@@ -182,7 +182,7 @@
 		height:10em;
 	}
 	.product div {
-		height:8em;
+		height:8em !important;
 		margin-top:1em;
 		width:50%;
 	}
