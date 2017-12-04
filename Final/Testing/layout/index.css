@@ -99,15 +99,23 @@ header div img {
 	position: relative;
 }
 
+#nav_menu ul li ul li a{
+	text-align: center;
+	display: block;
+	padding: 1em 0;
+	text-decoration: none;
+	color: White;
+	font-weight: bold;
+}
+
 #nav_menu ul li ul{
 	display: none;
 }
 
 #nav_menu ul li:hover> ul{
 	display: block;	
+	background-color: lightgrey;
 }
-
-
 
 
 
