@@ -22,19 +22,16 @@
 		
 		<p><?php echo $item['description'] ?></p>
 		<?php
-			if ($user->is_logged_in()) {
+			if ($user->is_logged_in() && $_SESSSION['username'] != $item['op']) {
 				echo '
 				<form action="bid.php" method="post">
 				Your Bid: $<input type="text" name="bid" id="bid" value="' . ($item['currentBid'] + .01) . '">
 				<input type="hidden" name="history" id="history" value="' . $item['bidHistory'] . '">
-				<input type="hidden" name="id" id="id" value="' . $currentID . '">';
-				if ($_SESSION['username'] != $item['op']) {
-					echo '<input type="submit" name="submit" id="submit" value="Bid">';
-				}
-				
-			echo '</form>';
+				<input type="hidden" name="id" id="id" value="' . $currentID . '">
+				<input type="submit" name="submit" id="submit" value="Bid">
+			</form>';
 			}
-			else {
+			else if (!$user->is_logged_in()){
 				echo 'Please sign in/register to bid<br><br>';
 			}
 			if ($_SESSION['username'] == $item['op']) {

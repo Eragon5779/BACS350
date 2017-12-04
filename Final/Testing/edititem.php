@@ -1,7 +1,8 @@
 <?php require("includes/config.php");
 
 $id = $_POST['id2'];
-
+echo $id;
+echo $_POST['id2'];
 $title = 'Edit Item';
 require("layout/header.php");
 if (!$user->is_logged_in()) {
