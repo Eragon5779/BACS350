@@ -5,7 +5,7 @@
 	color:#eee;
 	font-family:sans-serif;
 }
-
+/* Error code font */
 .error {
 	color: red;
 }
@@ -34,7 +34,7 @@
 	margin-top:-2.75em;
 	z-index:-1;
 }
-
+/* Slideshow fade option queries */
 #slideshow :nth-child(6) {
   animation: xfade 30s 0s infinite;
 }
@@ -54,6 +54,7 @@
   animation: xfade 30s 20s infinite;
 }
 
+/* Slide position on page */
 .slide {
 	position:absolute;
 	width:100%;
@@ -131,7 +132,7 @@
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
-
+/* media query for screens of 1020px */
 @media only screen and (max-width:1024px) {
 	.info {
 		font-size:12pt;
