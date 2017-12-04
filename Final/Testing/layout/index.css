@@ -70,7 +70,7 @@ header div #r {
 	text-align:center;
 }
 header div #r input {
-	height:1.5em;
+	height:1em;
 	top:12.5%;
 	right:0.5em;
 	position:absolute;
@@ -97,6 +97,10 @@ header div img {
 	list-style-type: none;
 	padding: 0;
 	position: relative;
+}
+
+#nav_menu ul li ul{
+	display: none;
 }
 
 
