@@ -1,10 +1,10 @@
 <?php require('includes/config.php');
 
 	$currentID = $_GET["id"];
-	$stmt = $db->prepare('SELECT title, description, currentBid, op, bidHistory FROM items where id = :id');
+	$stmt = $db->prepare('SELECT title, description, currentBid, op, tags, bidHistory FROM items where id = :id');
 	$stmt->execute(array(':id' => $currentID));
 	$row = $stmt->fetch(PDO::FETCH_ASSOC);
-	$item = array('title'=>$row['title'], 'description'=>$row['description'], 'currentBid'=>$row['currentBid'], 'op'=>$row['op'], 'bidHistory'=>$row['bidHistory']);
+	$item = array('title'=>$row['title'], 'description'=>$row['description'], 'currentBid'=>$row['currentBid'], 'op'=>$row['op'], 'bidHistory'=>$row['bidHistory'], 'tags'=>$row['tags']);
 
 	$images = glob("media/items/" . $currentID . "/*.*");
 	$title = $row['title'];
@@ -21,6 +21,8 @@
 		<h3><?php echo '<a href="dash-2.php?username=' . $item['op']  . '">' . $item['op'] . '</a>'?></h3>
 		
 		<p><?php echo $item['description'] ?></p>
+
+		<p>Tags: <?php echo $item['tags'] ?></p>
 		<?php
 			if ($user->is_logged_in() && $_SESSSION['username'] != $item['op']) {
 				echo '
