@@ -37,7 +37,8 @@
 			if ($_SESSION['username'] == $item['op']) {
 				echo '<form action="edititem.php" method="POST">
 					  <input type="hidden" name="id2" id="id2" value="' . $item['id'] . '">
-					  <input type="submit" name="submit" id="submit" value="Edit">';
+					  <input type="submit2" name="submit2" id="submit2" value="Edit">
+					  </form>';
 			}
 			
 		?>
