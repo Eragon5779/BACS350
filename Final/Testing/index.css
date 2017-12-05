@@ -158,7 +158,7 @@ body table tr form:first-child {
 	/*padding-right: .3em;*/
 }
 
-body table tr form button {
+body table tr form input {
 	width: 100%;
 	text-align: center;
 }
