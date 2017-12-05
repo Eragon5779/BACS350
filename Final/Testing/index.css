@@ -132,6 +132,13 @@
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
+
+body {
+	background-color: #333;
+}
+body form {
+	color: #333;
+}
 /* media query for screens of 1024px */
 @media only screen and (max-width:1024px) {
 	
