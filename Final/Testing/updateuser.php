@@ -94,7 +94,7 @@
             }
         }
         else {
-            $title = 'Update User: ' . $_POST['username']];
+            $title = 'Update User: ' . $_POST['username'];
             // Get current user information
             $stmt = $db->prepare('SELECT username, passSalt, passHash, email, firstName, lastName FROM users where username = :username');
             $stmt->execute(array(':username' => $_POST['username']));
