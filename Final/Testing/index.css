@@ -139,6 +139,10 @@ body form input{
 	color: #333 !important;
 }
 
+body form select option {
+	color: #333 !important;
+}
+
 body table {
 	border: 1px solid #eee;
 	width: 50%;
