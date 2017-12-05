@@ -134,9 +134,9 @@
 }
 
 body {
-	background-color: #333;
+	background-color: #333 !important;
 }
-body form {
+body form input{
 	color: #333;
 }
 /* media query for screens of 1024px */
