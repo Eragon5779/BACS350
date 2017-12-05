@@ -142,7 +142,7 @@ body form input{
 
 body table {
 	border: 1px solid #eee;
-	width: 100%;
+	width: 50%;
 }
 
 /* media query for screens of 1024px */
