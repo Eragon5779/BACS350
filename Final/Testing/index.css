@@ -158,6 +158,11 @@ body table tr form:first-child {
 	/*padding-right: .3em;*/
 }
 
+body table tr form button {
+	width: 100%;
+	text-align: center;
+}
+
 /* media query for screens of 1024px */
 @media only screen and (max-width:1024px) {
 	
