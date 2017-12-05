@@ -5,7 +5,7 @@ $stmt->execute(array(':username' => $_SESSION['username']));
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $userInfo = array('admin'=>$row['admin']);
 
-$username = $_POST['username'];
+$username = $_POST['username2'];
 
 if (!$userInfo['admin']) {
     header("Location: index.php");
