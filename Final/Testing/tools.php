@@ -72,7 +72,7 @@ while($row=$stmt->fetch(PDO::FETCH_ASSOC)) {
           <td>' . $user['lastName'] . '</td>
           <td>' . $user['email'] . '</td>
           <td>
-          <form action="edititem.php" method="post">
+          <form action="updateuser.php" method="post">
           <input type="hidden" name="username" value="' . $user['username'] . '">
           <input type="submit" value="Edit">
           </form>
