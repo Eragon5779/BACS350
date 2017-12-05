@@ -46,27 +46,24 @@ require('layout/header.php');
 	<div id="slideshow">
 		<img alt="hayfields YCH" class="slide" src="media/hayfields.png">
 		<div class="info">
-			<h2>Hayfields</h2>
-			<h3>Current bid: $26.00</h3>
-			<h3><a href="dash-2.php?username=eragon5779">eragon5779</a></h3>
-			<p>Hayfields YCH edited</p>
-			<p>Tags: pony</p>
+			Hayfields</br>
+			Current bid: $26.00</br>
+			Hayfields YCH edited</br>
+			Tags: pony
 		</div>
-		<img alt="travellers YCH" class="slide" src="media/travellers.png">
+		<img alt="dual elf YCH" class="slide" src="media/dual_elf.png">
 		<div class="info">
-			<h2>Dual Elf</h2>
-			<h3>Current Bid: $10.00</h3>
-			<h3><a href="dash-2.php?username=jbarker">jbarker</a></h3>
-			<p>Two elves standing back to back</p>
-			<p>Tags: human</p>
+			Dual Elf</br>
+			Current Bid: $10.00</br>
+			Two elves standing back to back</br>
+			Tags: human
 		</div>
 		<img alt="beach playtime YCH" class="slide" src="media/beach_playtime.png">
 		<div class="info">
-			<h2>Beach Playtime</h2>
-			<h3>Current bid: $10.00</h3>
-			<h3><a href="dash-2.php?username=eragon5779">eragon5779</a></h3>
-			<p>Beach Playtime YCH</p>
-			<p>Tags: pony</p>
+			Beach Playtime</br>
+			Current bid: $10.00</br>
+			Beach Playtime YCH</br>
+			Tags: pony
 		</div>
 	</div>
 
