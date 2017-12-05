@@ -1,0 +1,66 @@
+\documentclass[11pt]{article}
+
+\usepackage{setspace}
+\usepackage[activate={true,nocompatibility},
+            final,
+            tracking=true,
+            kerning=true,
+            spacing=true,
+            factor=1100,
+            stretch=10,
+            shrink=10]{microtype}
+\usepackage{lipsum}
+
+\microtypecontext{spacing=nonfrench}
+
+\doublespacing
+
+\setlength\parskip{1ex}
+\setlength\parindent{1em}
+
+\begin{document}
+
+{\Huge FILE INDEX}\\*
+Casey Burklow, Isaac Dudney, KC Guzman, Matthew Hinze
+
+FORMAT:
+
+\texttt{/location/} Filetype\\*
+\texttt{file.extension} - description
+\vspace{4em}
+
+\texttt{/} PHP files\\*
+\texttt{additem.php} - The PHP function to add a new product listing (item) to the database. Uses a form to accept the needed data.\\*
+\texttt{admin.php} - Admin management page. Written in PHP, sending SQL commands with escalated priviledge.\\*
+\texttt{bid.php} - Server-side logic for updating bid information on an item. No userfacing code is in this script.\\*
+\texttt{dash-2.php} - Profile page. Doubles as user preferences page if logged in. Has a list of items that user has created, and preferences if the user is logged in.\\*
+\texttt{dash.php} - Fallback for the previous; less featured but known-stable so we keep it just in case. UNUSED.\\*
+\texttt{deleteitem.php} - Serverside script for deleting an item, requires the user to be the original poster or an admin to be deleted.\\*
+\texttt{deleteuser.php} - Serverside script for deleting a user, requires the user to be an admin to be deleted.\\*
+\texttt{edititem.php} - Item edit page for the user that submitted it, in case they want to change the tags/description/title of the work. This is purely the user-facing side of the function, no backend stuff happens here.\\*
+\texttt{index.php} - Main page. Includes the slideshow for the featured items.\\*
+\texttt{logout.php} - Literally just a link to log the user out.\\*
+\texttt{moditem.php} - Serverside script for editing item, edititem.php calls this function to execute the actual edit (no logic stored in edititem.php, it's just userfacing code).\\*
+\texttt{newitem.php} - Form to add a new item to the database.\\*
+\texttt{product.php} - Main page for an item, this is what happens if you click on a title in a search.\\*
+\texttt{search.php} - Logic for search form in the header. Searches through database for text entered into form.\\*
+\texttt{updateuser.php} - Logic for updating user information, includes server-side logic and submits to itself.
+
+\texttt{/} CSS files\\*
+\texttt{index.css} - primary CSS for the main body of every page; most of the pages share CSS elements, so it's more efficient to reference just one for the body. There is a separate one for the header.
+
+\texttt{/classes/} PHP files\\*
+\texttt{password.php} - Hashes the password for storage on the server; since it's a big security risk to store plaintext passwords, we hash the passwords and store the hashes in the server's database.\\*
+\texttt{user.php} - enters user data into server's database, including password hash.
+
+\texttt{/includes/} PHP files\\*
+\texttt{config.php} - Configuration for the server. Includes PDO connection, timezone, email address, database IP address, and more.
+
+\texttt{/layout/} PHP files\\*
+\texttt{footer.php} - Global footer file. Inserted at the end of the index page, unneeded on other webpages.\\*
+\texttt{header.php} - Global header file. Includes login form, search form, hero banner, logo, categories drop down.
+
+\texttt{/layout/} CSS files\\*
+\texttt{index.css} - Header/footer CSS file. Includes media queries to ensure RWD for the entire header down to original iPhone width screens.
+
+\end{document}
