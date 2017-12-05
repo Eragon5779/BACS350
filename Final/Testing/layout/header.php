@@ -82,6 +82,6 @@ if(isset($_POST['submit'])){
 			<input style="margin-right:30%;" type="text" name="keyword" placeholder="search"></input>
 			<input type="submit" id="sub" style="width:27.5%;" value="Submit"></input>
 			</form>
-			<a href="../index.php"><img alt="site logo" src="media/logo.png"></img></a>
+			<a href="index.php"><img alt="site logo" src="media/logo.png"></img></a>
 		</div>
 	</header>
