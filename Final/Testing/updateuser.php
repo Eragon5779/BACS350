@@ -157,7 +157,7 @@
                         ':firstName' => $newFirstName,
                         ':lastName' => $newLastName,
                         ':email' => $newEmail,
-                        ':username' => $_SESSION['username']
+                        ':username' => $_POST['username']
                     ));
                     $updated = TRUE;
                 }
