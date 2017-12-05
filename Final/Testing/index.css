@@ -151,6 +151,8 @@ body table th {
 
 body table tr form {
 	float: left;
+}
+body table tr form:first-child {
 	padding-right: .3em;
 }
 
