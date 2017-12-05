@@ -32,6 +32,7 @@ if(isset($_POST['submit'])){
 	<meta name="viewport" content="width-device-width, initial-scale=1"/>
 	<link rel="stylesheet" href="layout/index.css">
 	<link rel="stylesheet" href="index.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 	<title><?php if(isset($title)){ echo $title; }?></title>
 </head>
 <body>
