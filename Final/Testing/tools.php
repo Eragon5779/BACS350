@@ -18,9 +18,9 @@ if (!$userInfo['admin']) {
 $stmt = $db->prepare('SELECT * FROM items');
 $stmt->execute();
 
-echo '<body style="background-color: #333"><table name="items">';
-echo '<div style="margin-left: 1em;">';
+echo '<body style="background-color: #333"><div style="margin-left: 1em;">';
 echo '<h2>Item Management</h2><br>';
+echo '<table name="items">';
 echo '<tr>
       <th>ID</th>
       <th>Title</th>
