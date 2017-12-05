@@ -4,6 +4,8 @@ admin.php - Admin management page. Written in PHP, sending SQL commands with esc
 bid.php - Server-side logic for updating bid information on an item. No userfacing code is in this script.
 dash-2.php - Profile page. Doubles as user preferences page if logged in. Has a list of items that user has created, and preferences if the user is logged in.
 dash.php - Fallback for the previous; less featured but known-stable so we keep it just in case. UNUSED.
+deleteitem.php - Serverside script for deleting an item, requires the user to be the original poster or an admin to be deleted.
+deleteuser.php - Serverside script for deleting a user, requires the user to be an admin to be deleted.
 edititem.php - Item edit page for the user that submitted it, in case they want to change the tags/description/title of the work. This is purely the user-facing side of the function, no backend stuff happens here.
 index.php - Main page. Includes the slideshow for the featured items.
 logout.php - Literally just a link to log the user out.
