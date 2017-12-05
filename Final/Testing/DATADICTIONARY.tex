@@ -1,0 +1,68 @@
+\documentclass[11pt]{article}
+
+\usepackage{setspace}
+\usepackage[activate={true,nocompatibility},
+            final,
+            tracking=true,
+            kerning=true,
+            spacing=true,
+            factor=1100,
+            stretch=10,
+            shrink=10]{microtype}
+\usepackage{marvosym}
+\usepackage[normalem]{ulem}
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\lstset{frame=none,
+  basicstyle={\small\ttfamily},
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  tabsize=2,
+  upquote=true}
+\usepackage{chngpage}
+
+\microtypecontext{spacing=nonfrench}
+
+\onehalfspacing
+
+\newenvironment{results}{\ttfamily}
+
+\setlength\parskip{1ex}
+\setlength\parindent{1em}
+\emergencystretch 5em%
+
+\begin{document}
+
+{\Huge DATA DICTIONARY}\\*
+Casey Burklow, Isaac Dudney, KC Guzman, Matthew Hinze
+\vspace{4em}
+
+\begin{results}
+\begin{tabular}{ r | r | r}
+TABLE & NAME & TYPE\\
+ITEMS & id & int(11)\\
+ITEMS & title & varchar(64)\\
+ITEMS & description & varchar(255)\\
+ITEMS & currentBid & float\\
+ITEMS & bidHistory & text\\
+ITEMS & listTime & timestamp\\
+ITEMS & endTime & datetime\\
+ITEMS & reserve & float\\
+ITEMS & op & varchar(255)\\
+ITEMS & tags & varchar(255)\\
+&&\\
+USER & username & char(32)\\
+USER & email & char(255)\\
+USER & firstName & char(32)\\
+USER & lastName & char(32)\\
+USER & passSalt & char(64)\\
+USER & passHash & char(64)\\
+USER & itemList & text\\
+USER & address & text\\
+USER & admin & tinyint(1)\\
+\end{tabular}
+\end{results}
+
+\end{document}
