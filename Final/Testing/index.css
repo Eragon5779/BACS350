@@ -151,6 +151,7 @@ body table th {
 
 body table tr form {
 	float: left;
+	padding-right: .1em;
 }
 
 /* media query for screens of 1024px */
