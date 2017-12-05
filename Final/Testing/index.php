@@ -46,18 +46,27 @@ require('layout/header.php');
 	<div id="slideshow">
 		<img alt="hayfields YCH" class="slide" src="media/hayfields.png">
 		<div class="info">
-			Hayfields<br>
-			The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children.
+			<h2>Hayfields</h2>
+			<h3>Current bid: $26.00</h3>
+			<h3><a href="dash-2.php?username=eragon5779">eragon5779</a></h3>
+			<p>Hayfields YCH edited</p>
+			<p>Tags: pony</p>
 		</div>
 		<img alt="travellers YCH" class="slide" src="media/travellers.png">
 		<div class="info">
-			Explorers!<br>
-			Just think about these things in your mind - then bring them into your world. Let your heart take you to wherever you want to be. I thought today we would do a happy little picture. Use what happens naturally, don't fight it. Now we can begin working on lots of happy little things. No pressure.
+			<h2>Dual Elf</h2>
+			<h3>Current Bid: $10.00</h3>
+			<h3><a href="dash-2.php?username=jbarker">jbarker</a></h3>
+			<p>Two elves standing back to back</p>
+			<p>Tags: human</p>
 		</div>
 		<img alt="beach playtime YCH" class="slide" src="media/beach_playtime.png">
 		<div class="info">
-			Beach Playtime<br>
-			Bacon ipsum dolor amet adipisicing tail esse tenderloin magna beef ribs, incididunt pork chop shankle cupidatat leberkas consectetur. Brisket occaecat sint, picanha cupim sunt commodo ball tip porchetta anim dolore spare ribs. Ea flank eiusmod, andouille reprehenderit enim brisket boudin veniam picanha adipisicing.
+			<h2>Beach Playtime</h2>
+			<h3>Current bid: $10.00</h3>
+			<h3><a href="dash-2.php?username=eragon5779">eragon5779</a></h3>
+			<p>Beach Playtime YCH</p>
+			<p>Tags: pony</p>
 		</div>
 	</div>
 
