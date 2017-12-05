@@ -8,14 +8,14 @@
     else {
         $username = $_SESSION['username'];
     }
-    echo $username;
-    $stmt->execute(array(':username' => $username));
+    //echo $username;
+    $stmt->execute(array(':username' => $_SESSION['username']));
 
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     $curUser = array('admin'=>$row['admin']);
 
     require("layout/header.php");
-    if (!$user->is_logged_in() || !$curUser['admin']) {
+    if (!$user->is_logged_in()) {
         header("Location: index.php");
     }
      // The following are the correct values
@@ -30,7 +30,7 @@
     // Does logic for updating user information if POST data is received
     if (!empty($_POST)) {
         if (!isset($_POST['username'])) {
-            echo 'Username not in post';
+            //echo 'Username not in post';
             $title = 'Update User: ' . $_SESSION['username'];
             // Get current user information
             $stmt = $db->prepare('SELECT username, passSalt, passHash, email, firstName, lastName FROM users where username = :username');
@@ -96,7 +96,7 @@
             }
         }
         else {
-            echo 'Username in post';
+            //echo 'Username in post';
             if (isset($_POST['firstName']) || isset($_POST['lastName']) || isset($_POST['email']) ||isset($_POST['oldPass']) ||isset($_POST['newPass']) ||isset($_POST['confirmPass'])) {
                 $title = 'Update User: ' . $_POST['username'];
                 // Get current user information
