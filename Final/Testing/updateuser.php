@@ -94,7 +94,7 @@
             }
         }
         else {
-            if (isset($_POST['firstName']) || isset($_POST['lastName']) || isset($_POST['email']) ||isset($_POST['oldPass']) ||isset($_POST['newPass']) ||isset($_POST['confirmPass']))) {
+            if (isset($_POST['firstName']) || isset($_POST['lastName']) || isset($_POST['email']) ||isset($_POST['oldPass']) ||isset($_POST['newPass']) ||isset($_POST['confirmPass'])) {
                 $title = 'Update User: ' . $_POST['username'];
                 // Get current user information
                 $stmt = $db->prepare('SELECT username, passSalt, passHash, email, firstName, lastName FROM users where username = :username');
