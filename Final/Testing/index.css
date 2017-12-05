@@ -151,7 +151,7 @@ body table th {
 
 body table tr form {
 	float: right;
-	width: 35%;
+	width: 45%;
 }
 body table tr form:first-child {
 	float: left;
