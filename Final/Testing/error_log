@@ -1,0 +1,141 @@
+[28-Nov-2017 08:42:48 America/Denver] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM users where username = ?' at line 1 in /home4/eragon5779/bacs350/Final/Testing/dash-2.php:12
+Stack trace:
+#0 /home4/eragon5779/bacs350/Final/Testing/dash-2.php(12): PDO->prepare('SELECT username...')
+#1 {main}
+  thrown in /home4/eragon5779/bacs350/Final/Testing/dash-2.php on line 12
+[28-Nov-2017 08:47:20 America/Denver] PHP Fatal error:  Uncaught Error: Call to a member function is_logged_in() on array in /home4/eragon5779/bacs350/Final/Testing/layout/header.php:21
+Stack trace:
+#0 /home4/eragon5779/bacs350/Final/Testing/dash-2.php(23): require()
+#1 {main}
+  thrown in /home4/eragon5779/bacs350/Final/Testing/layout/header.php on line 21
+[28-Nov-2017 08:48:37 America/Denver] PHP Fatal error:  Uncaught Error: Call to a member function is_logged_in() on array in /home4/eragon5779/bacs350/Final/Testing/layout/header.php:21
+Stack trace:
+#0 /home4/eragon5779/bacs350/Final/Testing/dash-2.php(23): require()
+#1 {main}
+  thrown in /home4/eragon5779/bacs350/Final/Testing/layout/header.php on line 21
+[28-Nov-2017 08:49:04 America/Denver] PHP Warning:  Illegal string offset 'id' in /home4/eragon5779/bacs350/Final/Testing/dash-2.php on line 36
+[28-Nov-2017 08:49:04 America/Denver] PHP Warning:  Illegal string offset 'title' in /home4/eragon5779/bacs350/Final/Testing/dash-2.php on line 36
+[28-Nov-2017 08:49:04 America/Denver] PHP Warning:  Illegal string offset 'id' in /home4/eragon5779/bacs350/Final/Testing/dash-2.php on line 36
+[28-Nov-2017 08:49:04 America/Denver] PHP Warning:  Illegal string offset 'title' in /home4/eragon5779/bacs350/Final/Testing/dash-2.php on line 36
+[01-Dec-2017 11:31:20 America/Denver] PHP Fatal error:  Cannot declare class User, because the name is already in use in /home4/eragon5779/bacs350/Final/Testing/classes/user.php on line 58
+[01-Dec-2017 14:53:08 America/Denver] PHP Warning:  mkdir(): File exists in /home4/eragon5779/bacs350/Final/Testing/newitem.php on line 8
+[01-Dec-2017 14:56:12 America/Denver] PHP Warning:  mkdir(): File exists in /home4/eragon5779/bacs350/Final/Testing/newitem.php on line 8
+[01-Dec-2017 14:58:06 America/Denver] PHP Warning:  mkdir(): File exists in /home4/eragon5779/bacs350/Final/Testing/newitem.php on line 7
+[01-Dec-2017 15:04:07 America/Denver] PHP Warning:  mkdir(): File exists in /home4/eragon5779/bacs350/Final/Testing/newitem.php on line 7
+[04-Dec-2017 13:09:13 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 3
+[04-Dec-2017 13:09:49 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 3
+[04-Dec-2017 13:10:15 America/Chicago] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 3
+[04-Dec-2017 13:10:15 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 3
+[04-Dec-2017 13:10:21 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 3
+[04-Dec-2017 13:10:30 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 3
+[04-Dec-2017 13:11:08 America/Chicago] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 3
+[04-Dec-2017 13:11:08 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 3
+[04-Dec-2017 13:12:59 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 3
+[04-Dec-2017 13:13:16 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 3
+[04-Dec-2017 13:13:57 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 3
+[04-Dec-2017 13:14:58 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 3
+[04-Dec-2017 13:16:33 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 3
+[04-Dec-2017 13:16:45 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:16:54 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:17:00 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:17:12 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:18:44 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:20:05 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:20:11 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:20:57 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:21:11 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:21:25 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:21:26 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:21:31 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:21:55 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:24:59 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:25:15 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:25:22 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:25:22 America/Denver] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:25:22 America/Denver] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:25:22 America/Denver] PHP Fatal error:  Cannot declare class User, because the name is already in use in /home4/eragon5779/bacs350/Final/Testing/classes/user.php on line 58
+[04-Dec-2017 13:26:22 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:26:22 America/Denver] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:26:22 America/Denver] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:26:22 America/Denver] PHP Fatal error:  Cannot declare class User, because the name is already in use in /home4/eragon5779/bacs350/Final/Testing/classes/user.php on line 58
+[04-Dec-2017 13:26:42 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:26:42 America/Denver] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:26:42 America/Denver] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:26:42 America/Denver] PHP Fatal error:  Cannot declare class User, because the name is already in use in /home4/eragon5779/bacs350/Final/Testing/classes/user.php on line 58
+[04-Dec-2017 13:26:52 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:26:52 America/Denver] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:26:52 America/Denver] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:26:52 America/Denver] PHP Fatal error:  Cannot declare class User, because the name is already in use in /home4/eragon5779/bacs350/Final/Testing/classes/user.php on line 58
+[04-Dec-2017 13:27:03 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:27:03 America/Denver] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:27:03 America/Denver] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:27:03 America/Denver] PHP Fatal error:  Cannot declare class User, because the name is already in use in /home4/eragon5779/bacs350/Final/Testing/classes/user.php on line 58
+[04-Dec-2017 13:27:11 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:27:11 America/Denver] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:27:11 America/Denver] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:27:11 America/Denver] PHP Fatal error:  Cannot declare class User, because the name is already in use in /home4/eragon5779/bacs350/Final/Testing/classes/user.php on line 58
+[04-Dec-2017 13:27:27 America/Chicago] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:27:27 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:27:27 America/Denver] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:27:27 America/Denver] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:27:27 America/Denver] PHP Fatal error:  Cannot declare class User, because the name is already in use in /home4/eragon5779/bacs350/Final/Testing/classes/user.php on line 58
+[04-Dec-2017 13:33:46 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:33:46 America/Denver] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:33:46 America/Denver] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:33:46 America/Denver] PHP Fatal error:  Cannot declare class User, because the name is already in use in /home4/eragon5779/bacs350/Final/Testing/classes/user.php on line 58
+[04-Dec-2017 13:33:57 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:33:57 America/Denver] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:33:57 America/Denver] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:33:57 America/Denver] PHP Fatal error:  Cannot declare class User, because the name is already in use in /home4/eragon5779/bacs350/Final/Testing/classes/user.php on line 58
+[04-Dec-2017 13:34:06 America/Chicago] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:34:06 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:34:06 America/Denver] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:34:06 America/Denver] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 12:34:06 America/Denver] PHP Fatal error:  Cannot declare class User, because the name is already in use in /home4/eragon5779/bacs350/Final/Testing/classes/user.php on line 58
+[04-Dec-2017 13:35:37 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:38:04 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:39:29 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:41:05 America/Chicago] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:41:05 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:42:38 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home4/eragon5779/bacs350/Final/Testing/index.php:2) in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 5
+[04-Dec-2017 13:36:42 America/Denver] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1142 DELETE command denied to user 'eragon57_readdb'@'gator4027.hostgator.com' for table 'items' in /home4/eragon5779/bacs350/Final/Testing/deleteitem.php:14
+Stack trace:
+#0 /home4/eragon5779/bacs350/Final/Testing/deleteitem.php(14): PDO->prepare('DELETE FROM ite...')
+#1 {main}
+  thrown in /home4/eragon5779/bacs350/Final/Testing/deleteitem.php on line 14
+[04-Dec-2017 17:41:41 America/Denver] PHP Warning:  include(classes/phpmailer/mail.php): failed to open stream: No such file or directory in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 38
+[04-Dec-2017 17:41:41 America/Denver] PHP Warning:  include(): Failed opening 'classes/phpmailer/mail.php' for inclusion (include_path='.:/opt/php71/lib/php') in /home4/eragon5779/bacs350/Final/Testing/includes/config.php on line 38
+[05-Dec-2017 00:25:13 America/Chicago] PHP Parse error:  syntax error, unexpected ']' in /home4/eragon5779/bacs350/Final/Testing/updateuser.php on line 97
+[05-Dec-2017 00:25:47 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home4/eragon5779/bacs350/Final/Testing/updateuser.php on line 162
+[05-Dec-2017 00:30:11 America/Chicago] PHP Parse error:  syntax error, unexpected ')' in /home4/eragon5779/bacs350/Final/Testing/updateuser.php on line 97
+[05-Dec-2017 13:21:34 America/Denver] PHP Warning:  mkdir(): File exists in /home4/eragon5779/bacs350/Final/Testing/newitem.php on line 7
+[05-Dec-2017 13:21:34 America/Denver] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home4/eragon5779/bacs350/Final/Testing/newitem.php:30
+Stack trace:
+#0 /home4/eragon5779/bacs350/Final/Testing/newitem.php(30): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home4/eragon5779/bacs350/Final/Testing/newitem.php on line 30
+[05-Dec-2017 13:27:30 America/Denver] PHP Warning:  mkdir(): File exists in /home4/eragon5779/bacs350/Final/Testing/newitem.php on line 7
+[05-Dec-2017 13:27:30 America/Denver] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /home4/eragon5779/bacs350/Final/Testing/newitem.php:30
+Stack trace:
+#0 /home4/eragon5779/bacs350/Final/Testing/newitem.php(30): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home4/eragon5779/bacs350/Final/Testing/newitem.php on line 30
+[05-Dec-2017 13:34:21 America/Denver] PHP Warning:  mkdir(): File exists in /home4/eragon5779/bacs350/Final/Testing/newitem.php on line 7
+[05-Dec-2017 13:34:21 America/Denver] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'tags' cannot be null in /home4/eragon5779/bacs350/Final/Testing/newitem.php:30
+Stack trace:
+#0 /home4/eragon5779/bacs350/Final/Testing/newitem.php(30): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home4/eragon5779/bacs350/Final/Testing/newitem.php on line 30
+[05-Dec-2017 13:34:29 America/Denver] PHP Warning:  mkdir(): File exists in /home4/eragon5779/bacs350/Final/Testing/newitem.php on line 7
+[05-Dec-2017 13:34:29 America/Denver] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'tags' cannot be null in /home4/eragon5779/bacs350/Final/Testing/newitem.php:30
+Stack trace:
+#0 /home4/eragon5779/bacs350/Final/Testing/newitem.php(30): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home4/eragon5779/bacs350/Final/Testing/newitem.php on line 30
+[05-Dec-2017 13:37:16 America/Denver] PHP Warning:  mkdir(): File exists in /home4/eragon5779/bacs350/Final/Testing/newitem.php on line 7
+[05-Dec-2017 13:37:16 America/Denver] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'tags' cannot be null in /home4/eragon5779/bacs350/Final/Testing/newitem.php:30
+Stack trace:
+#0 /home4/eragon5779/bacs350/Final/Testing/newitem.php(30): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home4/eragon5779/bacs350/Final/Testing/newitem.php on line 30
+[05-Dec-2017 13:40:35 America/Denver] PHP Warning:  mkdir(): File exists in /home4/eragon5779/bacs350/Final/Testing/newitem.php on line 7

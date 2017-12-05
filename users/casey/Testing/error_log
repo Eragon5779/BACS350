@@ -1,0 +1,3 @@
+[16-Nov-2017 19:05:51 America/Denver] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in /home4/eragon5779/bacs350/users/casey/Testing/register.php on line 61
+[02-Dec-2017 16:06:31 America/Denver] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in /home4/eragon5779/bacs350/users/casey/Testing/register.php on line 61
+[05-Dec-2017 13:18:03 America/Denver] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in /home4/eragon5779/bacs350/users/casey/Testing/register.php on line 71
