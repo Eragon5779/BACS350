@@ -8,6 +8,7 @@
     else {
         $username = $_SESSION['username'];
     }
+    echo $username;
     $stmt->execute(array(':username' => $username));
 
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
