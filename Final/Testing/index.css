@@ -149,6 +149,10 @@ body table th {
 	text-align: left;
 }
 
+body table tr form {
+	float: left;
+}
+
 /* media query for screens of 1024px */
 @media only screen and (max-width:1024px) {
 	
