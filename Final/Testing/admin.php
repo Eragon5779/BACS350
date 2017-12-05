@@ -56,7 +56,14 @@ $currentIsLogged = ($currentUser == $_SESSION['username']);
     </ul>
 
 <?php
-
+if ($currentIsLogged) {
+    echo '<h2>Update Your Profile:</h2>' . 
+         '<ul>' . 
+         '<li><a href="additem.php">Add New Item</a></li>' . 
+         '<li><a href="updateuser.php">Change Information</a></li>' .
+         '<li><a href="tools.php">Admin Tools</a></li>' .
+         '</ul>';
+}
 require("layout/footer.php");
 
 ?>
