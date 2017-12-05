@@ -231,6 +231,12 @@
         <input type="password" name="confirmPass">
         <br>
 
+        <?php 
+            if (isset($_POST['username'])) {
+                echo '<input type="hidden" name="username" value="' . $_POST['username'] . '">';
+            }
+        ?>
+
         <input type="submit" value="Submit">
 
 	</form> 
