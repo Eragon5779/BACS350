@@ -47,8 +47,8 @@ if(isset($_POST['submit'])){
 		<form role="form" id="login" action="" method="post">
 			<?php if ($user->is_logged_in()){
 				$firstName = $_SESSION['firstName'];
-				echo '<p>Hello, ' . $firstName . '</p><br>
-				<a href="dash-2.php" style="color: #eee !important;">Your Profile</a><br>
+				echo '<p>Hello, ' . $firstName . '</p>
+				<a href="dash-2.php" style="color: #eee !important;">Your Profile</a><br><br>
 				<a href="logout.php"><button type="button">Logout</button></a>';
 				
 			}
