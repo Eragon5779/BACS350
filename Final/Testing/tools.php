@@ -19,6 +19,7 @@ $stmt = $db->prepare('SELECT * FROM items');
 $stmt->execute();
 
 echo '<body style="background-color: #333"><table name="items">';
+echo '<div style="margin-left: 1em;">';
 echo '<h2>Item Management</h2><br>';
 echo '<tr>
       <th>ID</th>
@@ -83,7 +84,7 @@ while($row=$stmt->fetch(PDO::FETCH_ASSOC)) {
           </tr>';
 }
 
-echo '</table>';
+echo '</table></div>';
 
 
 ?>
