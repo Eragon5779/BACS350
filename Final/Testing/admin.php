@@ -27,7 +27,7 @@ $currentIsLogged = ($currentUser == $_SESSION['username']);
 ?>
 
 <body style="background-color: #333;">
-
+<div style="margin-left: 1em;">
     <h1><?php 
     if ($currentIsLogged) {
         echo 'Your'; 
@@ -54,6 +54,7 @@ $currentIsLogged = ($currentUser == $_SESSION['username']);
 
     ?>
     </ul>
+    </div>
 
 <?php
 if ($currentIsLogged) {

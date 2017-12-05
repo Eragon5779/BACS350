@@ -143,7 +143,6 @@ body form input{
 body table {
 	border: 1px solid #eee;
 	width: 50%;
-	padding-left: .5 em;
 }
 
 body table th {
