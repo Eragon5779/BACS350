@@ -30,7 +30,7 @@ if (!$user->is_logged_in()) {
 
 <!-- dropdown menu to assign it a tag (for searching) -->
 	  Tag:<br>
-		<select>
+		<select name="tags">
 			<option value="human">Human</option>
 			<option value="pony">Pony</option>
 			<option value="furry">Furry</option>

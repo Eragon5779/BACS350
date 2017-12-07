@@ -120,7 +120,7 @@ header div img {
 
 
 
-@media screen and (min-width:550) {
+@media only screen and (max-width:550px) {
 	header div img {
 		height:4em;
 		margin:0em -2.5em;

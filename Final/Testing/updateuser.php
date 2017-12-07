@@ -1,6 +1,19 @@
 <?php require("includes/config.php");
 
-    $title = 'Update User: ' . $_SESSION['username'];
+    $stmt = $db->prepare('SELECT admin FROM users where username = :username');
+    $username = "";
+    if (isset($_POST['username'])) {
+        $username = $_POST['username'];
+    }
+    else {
+        $username = $_SESSION['username'];
+    }
+    //echo $username;
+    $stmt->execute(array(':username' => $_SESSION['username']));
+
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    $curUser = array('admin'=>$row['admin']);
+
     require("layout/header.php");
     if (!$user->is_logged_in()) {
         header("Location: index.php");
@@ -16,51 +29,64 @@
         
     // Does logic for updating user information if POST data is received
     if (!empty($_POST)) {
+        if (!isset($_POST['username'])) {
+            //echo 'Username not in post';
+            $title = 'Update User: ' . $_SESSION['username'];
+            // Get current user information
+            $stmt = $db->prepare('SELECT username, passSalt, passHash, email, firstName, lastName FROM users where username = :username');
+            $stmt->execute(array(':username' => $_SESSION['username']));
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $userInfo = array('username'=>$row['username'],'passSalt'=> $row['passSalt'],'passHash'=>$row['passHash'], 'email'=>$row['email'], 'firstName'=>$row['firstName'], 'lastName'=>$row['lastName']);
 
-        // Get current user information
-        $stmt = $db->prepare('SELECT username, passSalt, passHash, email, firstName, lastName FROM users where username = :username');
-        $stmt->execute(array(':username' => $_SESSION['username']));
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-        $userInfo = array('username'=>$row['username'],'passSalt'=> $row['passSalt'],'passHash'=>$row['passHash'], 'email'=>$row['email'], 'firstName'=>$row['firstName'], 'lastName'=>$row['lastName']);
+            // Set updated information appropriately
+            $newFirstName = $_POST['firstName'];
+            $newLastName = $_POST['lastName'];
+            $newEmail = $_POST['email'];
 
-        // Set updated information appropriately
-        $newFirstName = $_POST['firstName'];
-        $newLastName = $_POST['lastName'];
-        $newEmail = $_POST['email'];
-
-        // If any information isn't updated, let it be the old information
-        if ($newFirstName == NULL) {
-            $newFirstName = $userInfo['firstName'];
-        }
-        if ($newLastName == NULL) {
-            $newLastName = $userInfo['lastName'];
-        }
-        if ($newEmail == NULL) {
-            $newEmail = $userInfo['email'];
-        }
-
-        if ($_POST['oldPass'] != NULL || $_POST['newPass'] != NULL || $_POST['confirmPass'] != NULL) {
-            if ($_POST['oldPass'] == NULL || $_POST['newPass'] == NULL || $_POST['confirmPass'] == NULL) {
-                $filled = FALSE;
+            // If any information isn't updated, let it be the old information
+            if ($newFirstName == NULL) {
+                $newFirstName = $userInfo['firstName'];
             }
-            else if (!password_verify($_POST['oldPass'], $userInfo['passHash'])) {
-                $validated = FALSE;
+            if ($newLastName == NULL) {
+                $newLastName = $userInfo['lastName'];
             }
-            else if ($_POST['oldPass'] == $_POST['newPass']) {
-                $matched = TRUE;
+            if ($newEmail == NULL) {
+                $newEmail = $userInfo['email'];
             }
-            else if ($_POST['newPass'] != $_POST['confirmPass']) {
-                $confirmed = FALSE;
+
+            if ($_POST['oldPass'] != NULL || $_POST['newPass'] != NULL || $_POST['confirmPass'] != NULL) {
+                if ($_POST['oldPass'] == NULL || $_POST['newPass'] == NULL || $_POST['confirmPass'] == NULL) {
+                    $filled = FALSE;
+                }
+                else if (!password_verify($_POST['oldPass'], $userInfo['passHash'])) {
+                    $validated = FALSE;
+                }
+                else if ($_POST['oldPass'] == $_POST['newPass']) {
+                    $matched = TRUE;
+                }
+                else if ($_POST['newPass'] != $_POST['confirmPass']) {
+                    $confirmed = FALSE;
+                }
+                else {
+                    $options = [
+                        'cost' => 12,
+                        'salt' => $userInfo['passSalt']
+                    ];
+                    $newPassHash = $user->password_hash($_POST['newPass'], PASSWORD_BCRYPT, $options);
+                    $stmt = $db->prepare('UPDATE users SET passHash=:passHash, firstName=:firstName, lastName=:lastName, email=:email WHERE username=:username');
+                    $stmt->execute(array(
+                        ':passHash' => $newPassHash,
+                        ':firstName' => $newFirstName,
+                        ':lastName' => $newLastName,
+                        ':email' => $newEmail,
+                        ':username' => $_SESSION['username']
+                    ));
+                    $updated = TRUE;
+                }
             }
             else {
-                $options = [
-                    'cost' => 12,
-                    'salt' => $userInfo['passSalt']
-                ];
-                $newPassHash = $user->password_hash($_POST['newPass'], PASSWORD_BCRYPT, $options);
-                $stmt = $db->prepare('UPDATE users SET passHash=:passHash, firstName=:firstName, lastName=:lastName, email=:email WHERE username=:username');
+                $stmt = $db->prepare('UPDATE users SET firstName=:firstName, lastName=:lastName, email=:email WHERE username=:username');
                 $stmt->execute(array(
-                    ':passHash' => $newPassHash,
                     ':firstName' => $newFirstName,
                     ':lastName' => $newLastName,
                     ':email' => $newEmail,
@@ -70,16 +96,80 @@
             }
         }
         else {
-            $stmt = $db->prepare('UPDATE users SET firstName=:firstName, lastName=:lastName, email=:email WHERE username=:username');
-            $stmt->execute(array(
-                ':firstName' => $newFirstName,
-                ':lastName' => $newLastName,
-                ':email' => $newEmail,
-                ':username' => $_SESSION['username']
-            ));
-            $updated = TRUE;
+            //echo 'Username in post';
+            if (isset($_POST['firstName']) || isset($_POST['lastName']) || isset($_POST['email']) ||isset($_POST['oldPass']) ||isset($_POST['newPass']) ||isset($_POST['confirmPass'])) {
+                $title = 'Update User: ' . $_POST['username'];
+                // Get current user information
+                $stmt = $db->prepare('SELECT username, passSalt, passHash, email, firstName, lastName FROM users where username = :username');
+                $stmt->execute(array(':username' => $_POST['username']));
+                $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                $userInfo = array('username'=>$row['username'],'passSalt'=> $row['passSalt'],'passHash'=>$row['passHash'], 'email'=>$row['email'], 'firstName'=>$row['firstName'], 'lastName'=>$row['lastName']);
+    
+                // Set updated information appropriately
+                $newFirstName = $_POST['firstName'];
+                $newLastName = $_POST['lastName'];
+                $newEmail = $_POST['email'];
+    
+                // If any information isn't updated, let it be the old information
+                if ($newFirstName == NULL) {
+                    $newFirstName = $userInfo['firstName'];
+                }
+                if ($newLastName == NULL) {
+                    $newLastName = $userInfo['lastName'];
+                }
+                if ($newEmail == NULL) {
+                    $newEmail = $userInfo['email'];
+                }
+    
+                if ($_POST['oldPass'] != NULL || $_POST['newPass'] != NULL || $_POST['confirmPass'] != NULL) {
+                    if ($_POST['oldPass'] == NULL || $_POST['newPass'] == NULL || $_POST['confirmPass'] == NULL) {
+                        $filled = FALSE;
+                    }
+                    else if (!password_verify($_POST['oldPass'], $userInfo['passHash'])) {
+                        $validated = FALSE;
+                    }
+                    else if ($_POST['oldPass'] == $_POST['newPass']) {
+                        $matched = TRUE;
+                    }
+                    else if ($_POST['newPass'] != $_POST['confirmPass']) {
+                        $confirmed = FALSE;
+                    }
+                    else {
+                        $options = [
+                            'cost' => 12,
+                            'salt' => $userInfo['passSalt']
+                        ];
+                        $newPassHash = $user->password_hash($_POST['newPass'], PASSWORD_BCRYPT, $options);
+                        $stmt = $db->prepare('UPDATE users SET passHash=:passHash, firstName=:firstName, lastName=:lastName, email=:email WHERE username=:username');
+                        $stmt->execute(array(
+                            ':passHash' => $newPassHash,
+                            ':firstName' => $newFirstName,
+                            ':lastName' => $newLastName,
+                            ':email' => $newEmail,
+                            ':username' => $_POST['username']
+                        ));
+                        $updated = TRUE;
+                    }
+                }
+                else {
+                    $stmt = $db->prepare('UPDATE users SET firstName=:firstName, lastName=:lastName, email=:email WHERE username=:username');
+                    $stmt->execute(array(
+                        ':firstName' => $newFirstName,
+                        ':lastName' => $newLastName,
+                        ':email' => $newEmail,
+                        ':username' => $_POST['username']
+                    ));
+                    $updated = TRUE;
+                }
+            }
+            else {
+                $title = 'Update User: ' . $_POST['username'];
+            }
+            
         }
     }
+    
+
 
 ?>
 
@@ -143,6 +233,12 @@
         Confirm New Password:<br>
         <input type="password" name="confirmPass">
         <br>
+
+        <?php 
+            if (isset($_POST['username'])) {
+                echo '<input type="hidden" name="username" value="' . $_POST['username'] . '">';
+            }
+        ?>
 
         <input type="submit" value="Submit">
 

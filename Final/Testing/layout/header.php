@@ -32,6 +32,7 @@ if(isset($_POST['submit'])){
 	<meta name="viewport" content="width-device-width, initial-scale=1"/>
 	<link rel="stylesheet" href="layout/index.css">
 	<link rel="stylesheet" href="index.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 	<title><?php if(isset($title)){ echo $title; }?></title>
 </head>
 <body>
@@ -46,7 +47,8 @@ if(isset($_POST['submit'])){
 		<form role="form" id="login" action="" method="post">
 			<?php if ($user->is_logged_in()){
 				$firstName = $_SESSION['firstName'];
-				echo '<p>Hello, ' . $firstName . '</p><br>
+				echo '<p>Hello, ' . $firstName . '</p>
+				<a href="dash-2.php" style="color: #eee !important;">Your Profile</a><br><br>
 				<a href="logout.php"><button type="button">Logout</button></a>';
 				
 			}
@@ -78,8 +80,8 @@ if(isset($_POST['submit'])){
 					
 			<form id="r" action="search.php" method="get">
 			<input style="margin-right:30%;" type="text" name="keyword" placeholder="search"></input>
-			<input type="submit" id="sub" style="width:27.5%;"  name="submit2" value="Submit"></input>
+			<input type="submit" id="sub" style="width:27.5%;" value="Submit"></input>
 			</form>
-			<img alt="site logo" src="media/logo.png"></img>
+			<a href="index.php"><img alt="site logo" src="media/logo.png"></img></a>
 		</div>
 	</header>

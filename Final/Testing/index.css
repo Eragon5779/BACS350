@@ -3,7 +3,7 @@
 	border:0;
 	padding:0;
 	color:#eee;
-	font-family:sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 }
 /* Error code font */
 .error {
@@ -63,7 +63,6 @@
 }
 .info {
 	animation-fill-mode:forwards;
-	font-size:16pt;
 	position:absolute;
 	background-color:#333;
 	color:#eee;
@@ -132,6 +131,41 @@
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
+
+body {
+	background-color: #333 !important;
+}
+body form input{
+	color: #333 !important;
+}
+
+body form select option {
+	color: #333 !important;
+}
+
+body table {
+	border: 1px solid #eee;
+	width: 50%;
+}
+
+body table th {
+	text-align: left;
+}
+
+body table tr form {
+	float: right;
+	width: 45%;
+}
+body table tr form:first-child {
+	float: left;
+	/*padding-right: .3em;*/
+}
+
+body table tr form input {
+	width: 100%;
+	text-align: center;
+}
+
 /* media query for screens of 1024px */
 @media only screen and (max-width:1024px) {
 	
