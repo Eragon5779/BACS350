@@ -1,5 +1,5 @@
 <?php require("includes/config.php");
-
+//Update the item with the data from POST
 $stmt = $db->prepare("UPDATE items SET title=:title, description=:description, tags=:tags WHERE id=:id");
 $stmt -> execute(array(
     ':title' => $_POST['title'],

@@ -1,5 +1,5 @@
 <?php require("includes/config.php");
-
+    //Check admin status
     $stmt = $db->prepare('SELECT admin FROM users where username = :username');
     $username = "";
     if (isset($_POST['username'])) {
@@ -53,7 +53,7 @@
             if ($newEmail == NULL) {
                 $newEmail = $userInfo['email'];
             }
-
+            //Check to see if password is being updated
             if ($_POST['oldPass'] != NULL || $_POST['newPass'] != NULL || $_POST['confirmPass'] != NULL) {
                 if ($_POST['oldPass'] == NULL || $_POST['newPass'] == NULL || $_POST['confirmPass'] == NULL) {
                     $filled = FALSE;
@@ -72,6 +72,7 @@
                         'cost' => 12,
                         'salt' => $userInfo['passSalt']
                     ];
+                    //Hash new password and update user
                     $newPassHash = $user->password_hash($_POST['newPass'], PASSWORD_BCRYPT, $options);
                     $stmt = $db->prepare('UPDATE users SET passHash=:passHash, firstName=:firstName, lastName=:lastName, email=:email WHERE username=:username');
                     $stmt->execute(array(
@@ -84,6 +85,7 @@
                     $updated = TRUE;
                 }
             }
+            //Update information without password
             else {
                 $stmt = $db->prepare('UPDATE users SET firstName=:firstName, lastName=:lastName, email=:email WHERE username=:username');
                 $stmt->execute(array(
@@ -95,6 +97,7 @@
                 $updated = TRUE;
             }
         }
+        //Admin logic
         else {
             //echo 'Username in post';
             if (isset($_POST['firstName']) || isset($_POST['lastName']) || isset($_POST['email']) ||isset($_POST['oldPass']) ||isset($_POST['newPass']) ||isset($_POST['confirmPass'])) {

@@ -9,7 +9,7 @@ class User extends Password{
 
     	$this->_db = $db;
     }
-
+	//Gets the password hash from the database
 	private function get_user_hash($username){
 
 		try {
@@ -22,14 +22,14 @@ class User extends Password{
 		    echo '<p class="bg-danger">'.$e->getMessage().'</p>';
 		}
 	}
-
+	//Checks to make sure that the username entered is valid
 	public function isValidUsername($username){
 		if (strlen($username) < 3) return false;
 		if (strlen($username) > 17) return false;
 		if (!ctype_alnum($username)) return false;
 		return true;
 	}
-
+	//Logs user in
 	public function login($username,$password){
 		if (!$this->isValidUsername($username)) return false;
 		if (strlen($password) < 3) return false;
@@ -44,11 +44,11 @@ class User extends Password{
 		    return true;
 		}
 	}
-
+	//Logs user out, destroys session
 	public function logout(){
 		session_destroy();
 	}
-
+	//Checks if user is logged in
 	public function is_logged_in(){
 		if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
 			return true;

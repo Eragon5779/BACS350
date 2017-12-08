@@ -1,16 +1,18 @@
 <?php require('includes/config.php');
-
+	//Get the ID from GET		
 	$currentID = $_GET["id"];
+	//Get item information from database
 	$stmt = $db->prepare('SELECT title, description, currentBid, op, tags, bidHistory FROM items where id = :id');
 	$stmt->execute(array(':id' => $currentID));
 	$row = $stmt->fetch(PDO::FETCH_ASSOC);
+	//Export the SQL row into a usable array
 	$item = array('title'=>$row['title'], 'description'=>$row['description'], 'currentBid'=>$row['currentBid'], 'op'=>$row['op'], 'bidHistory'=>$row['bidHistory'], 'tags'=>$row['tags']);
-
+	//Get the item images (should only be 1)
 	$images = glob("media/items/" . $currentID . "/*.*");
 	$title = $row['title'];
 	require('layout/header.php'); 
 ?>
-
+	<!-- Set the image based on the ID (always selects image 0) -->
 	<?php echo '<div class="product" style="background-image: url(' . $images[0] . ');" title="' . $images['title'] . '">' ?>
 
 		<div>
@@ -24,6 +26,7 @@
 
 		<p>Tags: <?php echo $item['tags'] ?></p>
 		<?php
+		//Shows bid information if user is logged in and the user is not the OP
 			if ($user->is_logged_in() && $_SESSSION['username'] != $item['op']) {
 				echo '
 				<form action="bid.php" method="post">

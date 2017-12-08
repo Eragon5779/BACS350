@@ -1,7 +1,8 @@
 <?php require("includes/config.php");
-
+//Get item post and header
 $id = $_POST['id2'];
 require("layout/header.php");
+//Make sure user is logged in before viewing page
 if (!$user->is_logged_in()) {
 	header("Location: index.php");
 }

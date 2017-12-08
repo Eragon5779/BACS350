@@ -8,19 +8,19 @@ if ($_GET['username'] == NULL) {
 else {
     $currentUser = $_GET['username'];
 }
-
+//Gets user information
 $stmt = $db->prepare('SELECT username, email, firstName, admin FROM users where username = :username');
 $stmt->execute(array(':username' => $currentUser));
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $userInfo = array('username'=>$row['username'], 'email'=>$row['email'], 'firstName'=>$row['firstName'], 'admin'=>$row['admin']);
-
+//Gets user items
 $stmt = $db->prepare('SELECT id, title FROM items where op = :op');
 $stmt->execute(array(':op' => $currentUser));
-
+//If user isn't admin, redirect
 if ($userInfo['admin'] != TRUE) {
     header("Location: index.php");
 }
-
+//Set title
 $title = $currentUser;
 require("layout/header.php");
 $currentIsLogged = ($currentUser == $_SESSION['username']);
@@ -46,7 +46,7 @@ $currentIsLogged = ($currentUser == $_SESSION['username']);
     <br />
     <ul>
     <?php
-
+        //Display user items
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $item = array('id'=>$row['id'], 'title'=>$row['title']);
             echo '<li><a href="product.php?id=' . $item['id'] . '">' . $item['title'] . '</a></li><br />';

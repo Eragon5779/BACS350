@@ -45,6 +45,7 @@ if(isset($_POST['submit'])){
 			}
 		?>
 		<form role="form" id="login" action="" method="post">
+			<!-- Checks if a user is logged in and displays proper information -->
 			<?php if ($user->is_logged_in()){
 				$firstName = $_SESSION['firstName'];
 				echo '<p>Hello, ' . $firstName . '</p>

@@ -52,6 +52,7 @@ Class Password {
                 trigger_error(sprintf("password_hash(): Unknown password hashing algorithm: %s", $algo), E_USER_WARNING);
                 return null;
         }
+        //Check if salt option exists
         if (isset($options['salt'])) {
             switch (gettype($options['salt'])) {
                 case 'NULL' :

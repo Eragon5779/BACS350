@@ -1,14 +1,16 @@
 <?php require("includes/config.php");
-
+//Get the latest ID from the database
 $stmt = $db->prepare("SELECT MAX(id) AS max_id FROM items");
 $stmt -> execute();
 $id = $stmt -> fetch(PDO::FETCH_ASSOC);
+//Add 1 for new item
 $max_id = $id['max_id'] + 1;
+//Create item directory
 mkdir('media/items/' . $max_id);
-
+//Set directory and file target
 $directory = 'media/items/' . $max_id . '/';
 $target = $directory . $_FILES['image']['name'];
-
+//Get file information
 $fileName = $_FILES['image']['name'];
 echo 'Filename: ' . $fileName . '';
 $fileSize = $_FILES['image']['size'];
@@ -17,7 +19,9 @@ $fileTmpName = $_FILES['image']['tmp_name'];
 //echo $fileTmpName;
 $fileType = $_FILES['image']['type'];
 $fileExtension = strtolower(end(explode('.', $fileName)));
+//If the item was successfully moved into the directory
 if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+    //Then insert the POST data into the database
     $stmt = $db->prepare('INSERT INTO items (title, description, currentBid, bidHistory, endTime, reserve, op, tags) VALUES (:title, :description, :currentBid, :bidHistory, :endTime, :reserve, :op, :tags)');
     $stmt->execute(array(
         ':title' => $_POST['title'],
@@ -34,6 +38,7 @@ if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
          header("Location: index.php");
 }
 else {
+    //Let the user know that it failed and to try again
     echo '<h1>Upload failed. Please try again later</h1><br />' . 
          '<a href="index.php">Click here to return to home</a>';
 }
